@@ -302,19 +302,20 @@ h3 {
 .profile-photo,
 .profile-photo-fallback {
   width: 100%;
-  max-width: 170px;
-  aspect-ratio: 1 / 1;
   margin: 0 auto;
   border-radius: 14px;
 }
 
+/* Photo keeps its own shape (no cropping) */
 .profile-photo {
+  max-width: 210px;
   height: auto;
-  object-fit: cover;
   background: var(--pill-bg);
 }
 
 .profile-photo-fallback {
+  max-width: 170px;
+  aspect-ratio: 1 / 1;
   display: grid;
   place-items: center;
   background: var(--pill-hover);
