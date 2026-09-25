@@ -281,12 +281,12 @@ h3 {
    ========================================================= */
 .about-layout {
   display: grid;
-  grid-template-columns: 340px minmax(0, 1fr);
-  gap: 40px;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 32px;
   align-items: start;
 }
 
-/* Left profile card */
+/* Left profile card: stays fixed below the tab bar while the page scrolls */
 .profile-card {
   position: sticky;
   top: calc(var(--nav-height) + 16px);
@@ -295,61 +295,71 @@ h3 {
   overscroll-behavior: contain;
   scrollbar-width: thin;
   text-align: center;
-  padding: 32px;
+  padding: 24px 22px;
+  font-size: 0.9rem;
+}
+
+.profile-photo,
+.profile-photo-fallback {
+  width: 100%;
+  max-width: 170px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  border-radius: 14px;
 }
 
 .profile-photo {
-  width: 100%;
-  aspect-ratio: 11 / 10;
+  height: auto;
   object-fit: cover;
-  border-radius: 14px;
   background: var(--pill-bg);
 }
 
 .profile-photo-fallback {
-  width: 100%;
-  aspect-ratio: 11 / 10;
-  border-radius: 14px;
   display: grid;
   place-items: center;
   background: var(--pill-hover);
   color: var(--accent);
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 600;
   letter-spacing: 0.04em;
 }
 
 .profile-name {
-  font-size: 1.8rem;
+  font-size: 1.35rem;
   font-weight: 500;
-  letter-spacing: 0.02em;
-  margin: 22px 0 12px;
+  letter-spacing: 0.01em;
+  margin: 16px 0 8px;
 }
 
 .profile-info {
   margin: 0;
-  line-height: 1.75;
+  line-height: 1.55;
 }
 
 .profile-info p {
   margin: 0;
 }
 
+.profile-email {
+  margin-top: 6px !important;
+  overflow-wrap: anywhere;
+}
+
 .profile-links {
   list-style: none;
-  margin: 20px 0 0;
-  padding: 20px 0 0;
+  margin: 16px 0 0;
+  padding: 16px 0 0;
   border-top: 1px solid var(--border);
   display: grid;
-  gap: 10px;
+  gap: 7px;
   text-align: left;
 }
 
 .profile-links a {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 9px 18px;
+  gap: 10px;
+  padding: 6px 14px;
   border: 1px solid var(--border);
   border-radius: 999px;
   background: var(--pill-bg);
@@ -365,9 +375,9 @@ h3 {
 }
 
 .profile-links i {
-  width: 22px;
+  width: 18px;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
 }
 
 /* Right column */
@@ -444,7 +454,7 @@ h3 {
     position: static;
     max-height: none;
     overflow: visible;
-    max-width: 420px;
+    max-width: 340px;
     width: 100%;
     margin: 0 auto;
   }
