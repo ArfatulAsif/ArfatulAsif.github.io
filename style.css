@@ -406,6 +406,7 @@ h3 {
 }
 
 .news-list li {
+  font-size: 0.92rem;
   display: grid;
   grid-template-columns: 140px minmax(0, 1fr);
   gap: 16px;
@@ -414,7 +415,7 @@ h3 {
 
 .news-date {
   color: var(--text-muted);
-  font-size: 0.92rem;
+  font-size: 0.85rem;
   padding-top: 2px;
 }
 
@@ -442,6 +443,7 @@ h3 {
 }
 
 .news-older summary {
+  font-size: 0.92rem;
   cursor: pointer;
   color: var(--link);
   list-style: none;
