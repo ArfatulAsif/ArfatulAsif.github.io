@@ -418,6 +418,25 @@ h3 {
   padding-top: 2px;
 }
 
+.news-tag {
+  display: inline-block;
+  padding: 0 8px;
+  margin-left: 2px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.6;
+  vertical-align: 1px;
+  white-space: nowrap;
+}
+
+.news-tag:hover {
+  text-decoration: none;
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
 .news-older {
   margin-top: 12px;
 }
