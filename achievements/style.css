@@ -1,0 +1,34 @@
+/* Achievements page styles (shared styles are in ../style.css) */
+
+.ach-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 18px;
+}
+
+.ach {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.ach p {
+  margin: 0;
+}
+
+.ach-title {
+  font-weight: 500;
+}
+
+.ach-icon {
+  flex: none;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--pill-hover);
+  color: var(--accent);
+}

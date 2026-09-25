@@ -1,0 +1,46 @@
+/* Travels page styles (shared styles are in ../style.css) */
+
+.place-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.place-grid .card + .card {
+  margin-top: 0;
+}
+
+.place {
+  margin: 0;
+  padding: 12px;
+}
+
+.place img,
+.place-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.place-photo {
+  display: grid;
+  place-items: center;
+  background: var(--pill-hover);
+  color: var(--accent);
+  font-size: 2rem;
+}
+
+.place figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 12px;
+  padding: 12px 6px 4px;
+}
+
+@media (max-width: 400px) {
+  .place-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

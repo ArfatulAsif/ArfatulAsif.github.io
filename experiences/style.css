@@ -1,0 +1,57 @@
+/* Experiences page styles (shared styles are in ../style.css) */
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 24px;
+  border-left: 2px solid var(--border);
+}
+
+.exp {
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.exp:last-child {
+  padding-bottom: 0;
+}
+
+.exp::before {
+  content: "";
+  position: absolute;
+  left: -31px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--surface);
+}
+
+.exp-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 16px;
+}
+
+.exp-head h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.exp-dates,
+.exp-org {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.exp-org {
+  margin: 2px 0 8px;
+}
+
+.exp ul {
+  margin: 0;
+  padding-left: 20px;
+}

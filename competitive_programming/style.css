@@ -1,0 +1,64 @@
+/* Competitive Programming page styles (shared styles are in ../style.css) */
+
+.judge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.judge-grid .card + .card {
+  margin-top: 0;
+}
+
+.judge {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 22px 24px;
+  color: var(--text);
+  transition: border-color 0.15s ease;
+}
+
+.judge:hover {
+  text-decoration: none;
+  border-color: var(--accent);
+}
+
+.judge-name {
+  font-weight: 500;
+}
+
+.judge-name i {
+  color: var(--accent);
+  margin-right: 6px;
+}
+
+.judge-rating {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.contest-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.contest-table th,
+.contest-table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.contest-table th {
+  color: var(--text-muted);
+  font-weight: 500;
+}

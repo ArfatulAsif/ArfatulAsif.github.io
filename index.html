@@ -1,42 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arfatul Islam Asif</title>
+  <meta name="description" content="Personal website of Arfatul Islam Asif.">
 
-    <title>My Website</title>
+  <!-- Apply saved theme before paint to avoid a flash -->
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t);else if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.setAttribute("data-theme","dark");}catch(e){}</script>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Fonts & icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-page="about" data-root="">
+  <header id="site-header" class="site-header"></header>
 
-    <header>
-        <h1>Welcome to My Website</h1>
-        <p>This is my first GitHub Pages website.</p>
-    </header>
+  <main class="container">
+    <div class="about-layout">
 
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>
-                Hello! I'm learning how to build websites using HTML,
-                CSS, and JavaScript.
-            </p>
+      <!-- ===== Left: profile card ===== -->
+      <aside class="card profile-card">
+        <!-- Put your photo at assets/img/profile.jpg -->
+        <img class="profile-photo" src="assets/img/profile.jpg" alt="Photo of Arfatul Islam Asif">
 
-            <button id="helloButton">Click Me</button>
+        <h1 class="profile-name">Arfatul Islam Asif</h1>
 
-            <p id="message"></p>
+        <div class="profile-info">
+          <p>[Your position]</p>
+          <p>[Department]</p>
+          <p>[University / Organization]</p>
+          <p>[City, Country]</p>
+          <p>Email: [you AT example.com]</p>
+        </div>
+
+        <!-- Replace each # with your real link -->
+        <ul class="profile-links">
+          <li><a href="assets/cv.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i> CV</a></li>
+          <li><a href="#" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Google Scholar</a></li>
+          <li><a href="#" target="_blank" rel="noopener"><i class="ai ai-orcid"></i> ORCID</a></li>
+          <li><a href="https://github.com/ArfatulAsif" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></li>
+          <li><a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+        </ul>
+      </aside>
+
+      <!-- ===== Right: bio + news ===== -->
+      <div class="about-main">
+
+        <section class="card bio">
+          <p>
+            I am a [your role] at <a href="#">[Your Department, Your University]</a>.
+          </p>
+          <p>
+            &#128640; [One-line highlight, e.g. what you are currently looking for.]
+          </p>
+          <p>
+            [A short paragraph about your research interests: the problems you work on,
+            the methods you use, and where they apply.]
+          </p>
+          <p>
+            [Education: where you studied and with whom. Link to your
+            <a href="my_research/index.html">research</a> or thesis here.]
+          </p>
         </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2026 My Website</p>
-    </footer>
+        <section class="card" aria-labelledby="news-title">
+          <h2 class="section-title" id="news-title">News</h2>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+          <ul class="news-list">
+            <li><span class="news-date">Sep 2026</span><span>[Latest news item.]</span></li>
+            <li><span class="news-date">Aug 2026</span><span>[News item, e.g. a paper was accepted at a conference.]</span></li>
+            <li><span class="news-date">Jul 2026</span><span>[News item.]</span></li>
+            <li><span class="news-date">Jun 2026</span><span>[News item.]</span></li>
+          </ul>
 
+          <details class="news-older">
+            <summary>Show older news</summary>
+            <ul class="news-list">
+              <li><span class="news-date">Dec 2025</span><span>[Older news item.]</span></li>
+              <li><span class="news-date">Oct 2025</span><span>[Older news item.]</span></li>
+            </ul>
+          </details>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

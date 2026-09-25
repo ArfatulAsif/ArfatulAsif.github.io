@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Arfatul Islam Asif</title>
+
+  <!-- Apply saved theme before paint to avoid a flash -->
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t);else if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.setAttribute("data-theme","dark");}catch(e){}</script>
+
+  <!-- Fonts & icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Shared site styles, then this page's styles -->
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="projects" data-root="../">
+  <header id="site-header" class="site-header"></header>
+
+  <main class="container">
+    <header class="page-header">
+      <h1>Projects</h1>
+      <p>[Things I have built.]</p>
+    </header>
+
+    <div class="project-filters" role="group" aria-label="Filter projects">
+      <button type="button" class="is-active" data-filter="all">All</button>
+      <button type="button" data-filter="ml">ML</button>
+      <button type="button" data-filter="web">Web</button>
+      <button type="button" data-filter="systems">Systems</button>
+    </div>
+
+    <div class="project-grid">
+      <article class="card project" data-tags="ml">
+        <h2>[Project name]</h2>
+        <p>[Short description: the problem, what you built, and the outcome.]</p>
+        <ul class="chips"><li>ML</li></ul>
+        <div class="project-links">
+          <a href="#"><i class="fa-brands fa-github"></i> Code</a>
+          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+        </div>
+      </article>
+      <article class="card project" data-tags="web">
+        <h2>[Project name]</h2>
+        <p>[Short description: the problem, what you built, and the outcome.]</p>
+        <ul class="chips"><li>Web</li></ul>
+        <div class="project-links">
+          <a href="#"><i class="fa-brands fa-github"></i> Code</a>
+          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+        </div>
+      </article>
+      <article class="card project" data-tags="systems ml">
+        <h2>[Project name]</h2>
+        <p>[Short description: the problem, what you built, and the outcome.]</p>
+        <ul class="chips"><li>Systems</li><li>ML</li></ul>
+        <div class="project-links">
+          <a href="#"><i class="fa-brands fa-github"></i> Code</a>
+          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+        </div>
+      </article>
+    </div>
+
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <!-- Shared site script, then this page's script -->
+  <script src="../script.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

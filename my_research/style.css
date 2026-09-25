@@ -1,0 +1,103 @@
+/* Research page styles (shared styles are in ../style.css) */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chips li {
+  padding: 4px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--pill-bg);
+  font-size: 0.92rem;
+}
+
+.pub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pub {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 20px;
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+}
+
+.pub:first-child {
+  border-top: 0;
+  padding-top: 4px;
+}
+
+.pub-venue {
+  align-self: start;
+  justify-self: start;
+  padding: 2px 10px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.pub p {
+  margin: 0;
+}
+
+.pub-title {
+  font-weight: 500;
+}
+
+.pub-authors {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.pub-links a,
+.pub-links button {
+  padding: 2px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--pill-bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.pub-links a:hover,
+.pub-links button:hover {
+  text-decoration: none;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.pub-abstract {
+  margin-top: 10px !important;
+  padding: 12px 16px;
+  border-left: 3px solid var(--accent);
+  background: var(--pill-bg);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .pub {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+}

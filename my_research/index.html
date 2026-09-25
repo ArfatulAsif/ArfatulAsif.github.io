@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research | Arfatul Islam Asif</title>
+
+  <!-- Apply saved theme before paint to avoid a flash -->
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t);else if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.setAttribute("data-theme","dark");}catch(e){}</script>
+
+  <!-- Fonts & icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Shared site styles, then this page's styles -->
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="research" data-root="../">
+  <header id="site-header" class="site-header"></header>
+
+  <main class="container">
+    <header class="page-header">
+      <h1>Research</h1>
+      <p>[One line describing your research focus.]</p>
+    </header>
+
+    <section class="card">
+      <h2 class="section-title">Research Interests</h2>
+      <p>[A short paragraph describing the questions you work on and why they matter.]</p>
+      <ul class="chips">
+        <li>[Interest 1]</li>
+        <li>[Interest 2]</li>
+        <li>[Interest 3]</li>
+        <li>[Interest 4]</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Publications</h2>
+      <ol class="pub-list">
+        <li class="pub">
+          <span class="pub-venue">[VENUE 2026]</span>
+          <div>
+            <p class="pub-title">[Paper title]</p>
+            <p class="pub-authors"><strong>Arfatul Islam Asif</strong>, [Co-author], [Co-author]</p>
+            <div class="pub-links">
+              <a href="#">PDF</a>
+              <a href="#">Code</a>
+              <button type="button" class="pub-abs-toggle">Abstract</button>
+            </div>
+            <p class="pub-abstract" hidden>[Paper abstract.]</p>
+          </div>
+        </li>
+        <li class="pub">
+          <span class="pub-venue">[VENUE 2025]</span>
+          <div>
+            <p class="pub-title">[Paper title]</p>
+            <p class="pub-authors">[Co-author], <strong>Arfatul Islam Asif</strong></p>
+            <div class="pub-links">
+              <a href="#">PDF</a>
+              <button type="button" class="pub-abs-toggle">Abstract</button>
+            </div>
+            <p class="pub-abstract" hidden>[Paper abstract.]</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <!-- Shared site script, then this page's script -->
+  <script src="../script.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

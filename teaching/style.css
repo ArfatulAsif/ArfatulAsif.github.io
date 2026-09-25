@@ -1,0 +1,37 @@
+/* Teaching page styles (shared styles are in ../style.css) */
+
+.course-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.course {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+}
+
+.course:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.course p {
+  margin: 0;
+}
+
+.course-term {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  padding-top: 2px;
+}
+
+@media (max-width: 600px) {
+  .course {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+}
