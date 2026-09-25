@@ -10,11 +10,11 @@
   --border: #e3e7ea;
   --text: #1f2328;
   --text-muted: #6b7280;
-  --accent: #157a6e;        /* active tab, headings */
+  --accent: #b509ac;        /* theme color: active tab, headings */
   --accent-contrast: #ffffff;
-  --link: #11906f;          /* inline links */
+  --link: #b509ac;          /* inline links */
   --pill-bg: #f7f9fa;
-  --pill-hover: #eef4f2;
+  --pill-hover: #f9edf8;
   --shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 2px 8px rgba(16, 24, 40, 0.04);
   --radius: 16px;
   --nav-height: 64px;
@@ -28,11 +28,11 @@
   --border: #2c3137;
   --text: #e6e8eb;
   --text-muted: #9aa3ad;
-  --accent: #2aa692;
-  --accent-contrast: #0d1412;
-  --link: #3cc49f;
+  --accent: #e46bdd;
+  --accent-contrast: #1a0f19;
+  --link: #e46bdd;
   --pill-bg: #202429;
-  --pill-hover: #252c2b;
+  --pill-hover: #2b2029;
   --shadow: none;
   color-scheme: dark;
 }
@@ -109,14 +109,24 @@ h3 {
 }
 
 .nav-brand {
-  font-size: 1.15rem;
-  font-weight: 400;
+  font-family: "Roboto", system-ui, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
   color: var(--text);
   white-space: nowrap;
 }
 
 .nav-brand strong {
-  font-weight: 600;
+  font-weight: 500;
+}
+
+/* No brand on the About page (the name is on the profile card), like the template */
+.nav-brand[hidden] {
+  display: none;
+}
+
+.nav-actions {
+  margin-left: auto;
 }
 
 .nav-brand:hover {
@@ -135,24 +145,24 @@ h3 {
 
 .nav-links a {
   display: block;
-  padding: 7px 12px;
-  border-radius: 8px;
+  padding: 6px 11px;
   color: var(--text);
-  font-size: 0.95rem;
+  font-family: "Roboto", system-ui, sans-serif;
+  font-size: 1.08rem;
+  font-weight: 300;
+  text-transform: lowercase;
   white-space: nowrap;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition: color 0.15s ease;
 }
 
 .nav-links a:hover {
   text-decoration: none;
-  background: var(--pill-hover);
   color: var(--accent);
 }
 
 .nav-links a[aria-current="page"] {
-  background: var(--accent);
-  color: var(--accent-contrast);
-  font-weight: 500;
+  color: var(--accent);
+  font-weight: 400;
 }
 
 .nav-actions {
@@ -175,7 +185,6 @@ h3 {
 }
 
 .icon-btn:hover {
-  background: var(--pill-hover);
   color: var(--accent);
 }
 
@@ -281,6 +290,10 @@ h3 {
 .profile-card {
   position: sticky;
   top: calc(var(--nav-height) + 16px);
+  max-height: calc(100vh - var(--nav-height) - 32px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
   text-align: center;
   padding: 32px;
 }
@@ -429,6 +442,8 @@ h3 {
 
   .profile-card {
     position: static;
+    max-height: none;
+    overflow: visible;
     max-width: 420px;
     width: 100%;
     margin: 0 auto;

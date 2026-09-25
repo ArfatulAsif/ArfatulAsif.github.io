@@ -45,7 +45,7 @@ function storeTheme(theme) {
 function applyTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
   const icon = document.querySelector("#theme-toggle i");
-  if (icon) icon.className = theme === "dark" ? "fa-solid fa-sun" : "fa-solid fa-moon";
+  if (icon) icon.className = theme === "dark" ? "fa-solid fa-sun" : "fa-solid fa-circle-half-stroke";
 }
 
 const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -64,11 +64,11 @@ function renderHeader() {
   header.className = "site-header";
   header.innerHTML = `
     <nav class="nav" aria-label="Main">
-      <a class="nav-brand" href="${ROOT}index.html">${SITE_NAME.first} <strong>${SITE_NAME.last}</strong></a>
+      <a class="nav-brand" href="${ROOT}index.html"${CURRENT_PAGE === "about" ? " hidden" : ""}>${SITE_NAME.first} <strong>${SITE_NAME.last}</strong></a>
       <div class="nav-actions">
         <ul class="nav-links" id="nav-links">${links}</ul>
         <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">
-          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-circle-half-stroke"></i>
         </button>
         <button class="icon-btn nav-toggle" id="nav-toggle" type="button"
                 aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
