@@ -8,8 +8,8 @@
   --bg: #f4f6f7;
   --surface: #ffffff;
   --border: #e3e7ea;
-  --text: #1f2328;
-  --text-muted: #6b7280;
+  --text: #1a1a1a;
+  --text-muted: #6c757d;
   --accent: #157a6e;        /* theme color: active tab, hover, headings */
   --accent-contrast: #ffffff;
   --link: #11906f;          /* inline links */
@@ -55,7 +55,6 @@ body {
   line-height: 1.65;
   background: var(--bg);
   color: var(--text);
-  -webkit-font-smoothing: antialiased;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -387,7 +386,8 @@ h3 {
 }
 
 .bio {
-  font-size: 0.92rem;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .bio p {
@@ -406,7 +406,8 @@ h3 {
 }
 
 .news-list li {
-  font-size: 0.92rem;
+  font-size: 1rem;
+  line-height: 1.6;
   display: grid;
   grid-template-columns: 140px minmax(0, 1fr);
   gap: 16px;
@@ -415,7 +416,7 @@ h3 {
 
 .news-date {
   color: var(--text-muted);
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   padding-top: 2px;
 }
 
