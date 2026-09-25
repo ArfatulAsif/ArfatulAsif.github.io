@@ -386,8 +386,12 @@ h3 {
   min-width: 0;
 }
 
+.bio {
+  font-size: 0.92rem;
+}
+
 .bio p {
-  margin: 0 0 1em;
+  margin: 0 0 0.9em;
 }
 
 .bio p:last-child {
