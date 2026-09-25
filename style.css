@@ -10,11 +10,11 @@
   --border: #e3e7ea;
   --text: #1f2328;
   --text-muted: #6b7280;
-  --accent: #b509ac;        /* theme color: active tab, headings */
+  --accent: #157a6e;        /* theme color: active tab, hover, headings */
   --accent-contrast: #ffffff;
-  --link: #b509ac;          /* inline links */
+  --link: #11906f;          /* inline links */
   --pill-bg: #f7f9fa;
-  --pill-hover: #f9edf8;
+  --pill-hover: #eef4f2;
   --shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 2px 8px rgba(16, 24, 40, 0.04);
   --radius: 16px;
   --nav-height: 64px;
@@ -28,11 +28,11 @@
   --border: #2c3137;
   --text: #e6e8eb;
   --text-muted: #9aa3ad;
-  --accent: #e46bdd;
-  --accent-contrast: #1a0f19;
-  --link: #e46bdd;
+  --accent: #2aa692;
+  --accent-contrast: #0d1412;
+  --link: #3cc49f;
   --pill-bg: #202429;
-  --pill-hover: #2b2029;
+  --pill-hover: #252c2b;
   --shadow: none;
   color-scheme: dark;
 }
