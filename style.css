@@ -538,10 +538,11 @@ h3 {
 }
 
 .edu-medal {
-  display: block;
+  position: absolute;
+  top: -15px;
+  right: -9px;
   width: 22px;
   height: 29px;
-  margin: -20px auto 2px; /* sits on the top edge of the award chip */
   filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3));
 }
 
@@ -584,7 +585,7 @@ h3 {
 
 .edu-result {
   font-size: 0.72rem;
-  margin: 6px 0 22px !important; /* room for the medal above the award chip */
+  margin: 6px 0 16px !important; /* room for the medal on the award chip's corner */
 }
 
 /* Award chip, pushed to the bottom so every card lines up */
@@ -592,7 +593,7 @@ h3 {
   margin-top: auto;
   position: relative;
   width: 100%;
-  padding: 5px 4px;
+  padding: 8px 6px 6px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
