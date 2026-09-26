@@ -122,61 +122,105 @@
 
         <section class="card" aria-labelledby="education-title">
           <h2 class="section-title" id="education-title">Education</h2>
+          <!-- Medal graphics (gold = distinction / talentpool, silver = general scholarship) -->
+          <svg class="svg-sprite" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="medal-gold-fill" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#fff1a8"/>
+                <stop offset="0.45" stop-color="#f2c230"/>
+                <stop offset="1" stop-color="#b8860b"/>
+              </linearGradient>
+              <linearGradient id="medal-silver-fill" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ffffff"/>
+                <stop offset="0.45" stop-color="#c9ced4"/>
+                <stop offset="1" stop-color="#858c95"/>
+              </linearGradient>
+            </defs>
+            <symbol id="medal-gold" viewBox="0 0 32 42">
+              <path d="M5 0h8l6 17h-8z" fill="#c0392b"/>
+              <path d="M27 0h-8l-6 17h8z" fill="#e0533f"/>
+              <circle cx="16" cy="28" r="12" fill="url(#medal-gold-fill)" stroke="#a67c00" stroke-width="1.5"/>
+              <circle cx="16" cy="28" r="8.5" fill="none" stroke="#fff4c2" stroke-width="1" opacity="0.8"/>
+              <path d="M16 22.2l1.8 3.6 4 .6-2.9 2.8.7 4-3.6-1.9-3.6 1.9.7-4-2.9-2.8 4-.6z" fill="#fff8dc" stroke="#a67c00" stroke-width="0.6"/>
+            </symbol>
+            <symbol id="medal-silver" viewBox="0 0 32 42">
+              <path d="M5 0h8l6 17h-8z" fill="#3b5b92"/>
+              <path d="M27 0h-8l-6 17h8z" fill="#5578b5"/>
+              <circle cx="16" cy="28" r="12" fill="url(#medal-silver-fill)" stroke="#7b828b" stroke-width="1.5"/>
+              <circle cx="16" cy="28" r="8.5" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.8"/>
+              <path d="M16 22.2l1.8 3.6 4 .6-2.9 2.8.7 4-3.6-1.9-3.6 1.9.7-4-2.9-2.8 4-.6z" fill="#f7f8fa" stroke="#7b828b" stroke-width="0.6"/>
+            </symbol>
+          </svg>
           <ol class="edu-row">
             <li class="edu-card">
               <div class="edu-logo">
                 <img src="education/bsc.png" alt="Shahjalal University of Science and Technology logo" loading="lazy">
-                <span class="edu-medal edu-medal--gold" title="With distinction" aria-label="With distinction"><i class="fa-solid fa-medal"></i></span>
+                <svg class="edu-medal" role="img" aria-label="With Distinction"><title>With Distinction</title><use href="#medal-gold"/></svg>
               </div>
+              <span class="edu-exam">B.Sc. in CSE</span>
               <p class="edu-inst">Shahjalal University of Science and Technology</p>
-              <p class="edu-degree">B.Sc. in Computer Science and Engineering</p>
               <p class="edu-dates">Mar 2022 &ndash; Mar 2026</p>
-              <p class="edu-note">CGPA 3.85/4.00 (with distinction)</p>
-              <p class="edu-note">5th in class</p>
+              <p class="edu-result">CGPA 3.85/4.00 &middot; 5th in class</p>
+              <div class="edu-award edu-award--gold">
+                <span>With Distinction</span>
+                <small>B.Sc. 2026</small>
+              </div>
             </li>
             <li class="edu-card">
               <div class="edu-logo">
                 <img src="education/hsc.png" alt="Murari Chand College logo" loading="lazy">
-                <span class="edu-medal edu-medal--grey" title="General Scholarship" aria-label="General Scholarship"><i class="fa-solid fa-medal"></i></span>
+                <svg class="edu-medal" role="img" aria-label="General Scholarship"><title>General Scholarship</title><use href="#medal-silver"/></svg>
               </div>
+              <span class="edu-exam">HSC</span>
               <p class="edu-inst">Murari Chand College</p>
-              <p class="edu-degree">Higher Secondary Certificate (HSC)</p>
               <p class="edu-dates">Jul 2018 &ndash; Jul 2020</p>
-              <p class="edu-note">GPA 5.00 (Golden)</p>
-              <p class="edu-note">General Scholarship, HSC 2020, Sylhet Division</p>
+              <p class="edu-result">GPA 5.00 (Golden)</p>
+              <div class="edu-award edu-award--silver">
+                <span>General Scholarship</span>
+                <small>HSC 2020, Sylhet Division</small>
+              </div>
             </li>
             <li class="edu-card">
               <div class="edu-logo">
                 <img src="education/ssc.jpeg" alt="Jalalabad Cantonment Public School and College logo" loading="lazy">
-                <span class="edu-medal edu-medal--gold" title="Talentpool Scholarship" aria-label="Talentpool Scholarship"><i class="fa-solid fa-medal"></i></span>
+                <svg class="edu-medal" role="img" aria-label="Talentpool Scholarship"><title>Talentpool Scholarship</title><use href="#medal-gold"/></svg>
               </div>
+              <span class="edu-exam">SSC</span>
               <p class="edu-inst">Jalalabad Cantonment Public School and College</p>
-              <p class="edu-degree">Secondary School Certificate (SSC)</p>
               <p class="edu-dates">Jan 2015 &ndash; Mar 2018</p>
-              <p class="edu-note">GPA 5.00 (Golden), board stand result with 95%+ marks</p>
-              <p class="edu-note">Talentpool Scholarship, SSC 2018, Sylhet Division</p>
+              <p class="edu-result">GPA 5.00 (Golden) &middot; Board stand, 95%+ marks</p>
+              <div class="edu-award edu-award--gold">
+                <span>Talentpool Scholarship</span>
+                <small>SSC 2018, Sylhet Division</small>
+              </div>
             </li>
             <li class="edu-card">
               <div class="edu-logo">
                 <img src="education/jsc.jpeg" alt="Hazi Inzad Ali High School logo" loading="lazy">
-                <span class="edu-medal edu-medal--grey" title="General Scholarship" aria-label="General Scholarship"><i class="fa-solid fa-medal"></i></span>
+                <svg class="edu-medal" role="img" aria-label="General Scholarship"><title>General Scholarship</title><use href="#medal-silver"/></svg>
               </div>
+              <span class="edu-exam">JSC</span>
               <p class="edu-inst">Hazi Inzad Ali High School, Juri, Moulvibazar</p>
-              <p class="edu-degree">Junior School Certificate (JSC)</p>
               <p class="edu-dates">Jan 2012 &ndash; Dec 2015</p>
-              <p class="edu-note">GPA 5.00 (Golden)</p>
-              <p class="edu-note">General Scholarship, JSC, Moulvibazar Division</p>
+              <p class="edu-result">GPA 5.00 (Golden)</p>
+              <div class="edu-award edu-award--silver">
+                <span>General Scholarship</span>
+                <small>JSC, Moulvibazar Division</small>
+              </div>
             </li>
             <li class="edu-card">
               <div class="edu-logo">
                 <i class="fa-solid fa-school" aria-hidden="true"></i>
-                <span class="edu-medal edu-medal--gold" title="Talentpool Scholarship" aria-label="Talentpool Scholarship"><i class="fa-solid fa-medal"></i></span>
+                <svg class="edu-medal" role="img" aria-label="Talentpool Scholarship"><title>Talentpool Scholarship</title><use href="#medal-gold"/></svg>
               </div>
+              <span class="edu-exam">PSC</span>
               <p class="edu-inst"><span lang="bn">প্রাথমিক শিক্ষা সমাপনী পরীক্ষা</span></p>
-              <p class="edu-degree">Primary School Certificate (PSC)</p>
               <p class="edu-dates">Oct 2012 &ndash; Dec 2012</p>
-              <p class="edu-note">GPA 5.00</p>
-              <p class="edu-note">Talentpool Scholarship</p>
+              <p class="edu-result">GPA 5.00</p>
+              <div class="edu-award edu-award--gold">
+                <span>Talentpool Scholarship</span>
+                <small>PSC 2012</small>
+              </div>
             </li>
           </ol>
         </section>
