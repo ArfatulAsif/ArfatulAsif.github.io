@@ -118,6 +118,42 @@ function setupProfilePhoto() {
   else photo.addEventListener("error", showInitials);
 }
 
+/* ---------- Hobbies (About page) ---------- */
+// Travel slideshow: show the next photo every `data-interval` ms, looping.
+function setupSlideshows() {
+  const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  document.querySelectorAll(".hobby-slideshow").forEach((show) => {
+    const slides = show.querySelectorAll("img");
+    if (slides.length < 2 || reduceMotion) return;
+
+    const interval = Number(show.dataset.interval) || 1000;
+    let index = 0;
+    setInterval(() => {
+      slides[index].classList.remove("is-active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("is-active");
+    }, interval);
+  });
+}
+
+// Only play hobby videos while they are on screen, to save battery and data.
+function setupHobbyVideos() {
+  const videos = document.querySelectorAll(".hobby-media video");
+  if (!videos.length || !("IntersectionObserver" in window)) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) entry.target.play().catch(() => {});
+      else entry.target.pause();
+    });
+  }, { threshold: 0.2 });
+
+  videos.forEach((video) => observer.observe(video));
+}
+
 renderHeader();
 renderFooter();
 setupProfilePhoto();
+setupSlideshows();
+setupHobbyVideos();
