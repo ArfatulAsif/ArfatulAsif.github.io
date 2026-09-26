@@ -470,7 +470,7 @@ h3 {
   margin-bottom: 4px;
 }
 
-/* ---------- Education: five cards in one row ---------- */
+/* ---------- Education: five cards stacked in one column ---------- */
 .svg-sprite {
   position: absolute;
   width: 0;
@@ -480,29 +480,27 @@ h3 {
 
 .edu-row {
   list-style: none;
-  margin: 16px 0 0;
+  margin: 12px 0 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 12px;
 }
 
 .edu-card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) 190px;
   align-items: center;
-  text-align: center;
-  padding: 22px 10px 12px;
+  gap: 22px;
+  padding: 16px 18px 16px 20px;
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--surface);
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .edu-card:hover {
   border-color: var(--accent);
-  box-shadow: 0 4px 14px rgba(16, 24, 40, 0.08);
-  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(16, 24, 40, 0.06);
 }
 
 .edu-card p {
@@ -512,87 +510,90 @@ h3 {
 /* Logo with the medal pinned to its top-right corner */
 .edu-logo {
   position: relative;
-  width: 72px;
-  height: 72px;
-  margin-bottom: 14px;
+  width: 64px;
+  height: 64px;
+  margin-top: 6px;
   border-radius: 50%;
   background: #ffffff;
   border: 1px solid var(--border);
   display: grid;
   place-items: center;
-  flex: none;
 }
 
 .edu-logo img {
-  width: 60px;
-  height: 60px;
+  width: 54px;
+  height: 54px;
   object-fit: contain;
   border-radius: 50%;
 }
 
 .edu-logo > .fa-school {
-  font-size: 1.6rem;
+  font-size: 1.45rem;
   color: var(--accent);
 }
 
 .edu-medal {
   position: absolute;
-  top: -16px;
-  right: -18px;
-  width: 32px;
-  height: 42px;
+  top: -14px;
+  right: -16px;
+  width: 28px;
+  height: 37px;
   filter: drop-shadow(0 1px 1.5px rgba(0, 0, 0, 0.3));
+}
+
+.edu-inst {
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.edu-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  margin-top: 4px !important;
 }
 
 .edu-exam {
   display: inline-block;
-  padding: 1px 10px;
+  padding: 0 9px;
   border-radius: 999px;
   background: var(--accent);
   color: var(--accent-contrast);
   font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.02em;
-  margin-bottom: 8px;
-}
-
-.edu-inst {
-  font-size: 0.8rem;
-  font-weight: 500;
-  line-height: 1.35;
+  line-height: 1.7;
 }
 
 .edu-dates {
   color: var(--text-muted);
-  font-size: 0.72rem;
-  margin-top: 4px !important;
+  font-size: 0.8rem;
 }
 
 .edu-result {
-  font-size: 0.75rem;
-  line-height: 1.4;
-  margin: 8px 0 10px !important;
+  font-size: 0.85rem;
+  margin-top: 4px !important;
 }
 
-/* Award chip, pushed to the bottom so all cards line up */
+/* Award chip on the right */
 .edu-award {
-  margin-top: auto;
-  width: 100%;
-  padding: 6px 6px;
+  padding: 7px 10px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   gap: 1px;
+  text-align: center;
   line-height: 1.3;
 }
 
 .edu-award span {
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 600;
 }
 
 .edu-award small {
-  font-size: 0.66rem;
+  font-size: 0.7rem;
   opacity: 0.85;
 }
 
@@ -616,15 +617,15 @@ h3 {
   color: #c3c9d1;
 }
 
-@media (max-width: 1100px) {
-  .edu-row {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+@media (max-width: 640px) {
+  .edu-card {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 12px 18px;
   }
-}
 
-@media (max-width: 520px) {
-  .edu-row {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .edu-award {
+    grid-column: 1 / -1;
+    text-align: left;
   }
 }
 
