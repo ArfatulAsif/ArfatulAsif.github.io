@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research | Arfatul Islam Asif</title>
+  <meta name="description" content="Research by Arfatul Islam Asif: publications, submitted work, thesis, datasets and supervised projects.">
 
   <!-- Apply saved theme before paint to avoid a flash -->
   <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t);else if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.setAttribute("data-theme","dark");}catch(e){}</script>
@@ -15,8 +16,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <!-- Shared site styles, then this page's styles -->
-  <link rel="stylesheet" href="../style.css?v=20260926b">
-  <link rel="stylesheet" href="style.css?v=20260926b">
+  <link rel="stylesheet" href="../style.css?v=20261007">
+  <link rel="stylesheet" href="style.css?v=20261007">
 </head>
 
 <body data-page="research" data-root="../">
@@ -25,57 +26,443 @@
   <main class="container">
     <header class="page-header">
       <h1>Research</h1>
-      <p>[One line describing your research focus.]</p>
+      <p>Machine learning for resource-constrained settings: handwriting biometrics, low-resource speech and NLP, and computational biology.</p>
     </header>
 
-    <section class="card">
-      <h2 class="section-title">Research Interests</h2>
-      <p>[A short paragraph describing the questions you work on and why they matter.]</p>
-      <ul class="chips">
-        <li>[Interest 1]</li>
-        <li>[Interest 2]</li>
-        <li>[Interest 3]</li>
-        <li>[Interest 4]</li>
-      </ul>
-    </section>
+    <div class="research-layout">
+        <aside class="research-sidebar" aria-label="Filter research by domain">
+          <div class="card sidebar-card">
+            <h2 class="sidebar-title">Domains</h2>
+            <ul class="domain-list">
+              <li><button type="button" class="domain-filter domain--all is-active" data-domain="all" aria-pressed="true"><span class="domain-dot"></span><span class="domain-name">All research</span><span class="domain-count"></span></button></li>
+              <li class="domain-group">Artificial intelligence</li>
+              <li><button type="button" class="domain-filter domain--cv" data-domain="cv" aria-pressed="false"><span class="domain-dot"></span><span class="domain-name">Computer Vision</span><span class="domain-count"></span></button></li>
+              <li><button type="button" class="domain-filter domain--ml" data-domain="ml" aria-pressed="false"><span class="domain-dot"></span><span class="domain-name">Machine Learning</span><span class="domain-count"></span></button></li>
+              <li><button type="button" class="domain-filter domain--nlp" data-domain="nlp" aria-pressed="false"><span class="domain-dot"></span><span class="domain-name">Natural Language Processing</span><span class="domain-count"></span></button></li>
+              <li><button type="button" class="domain-filter domain--speech" data-domain="speech" aria-pressed="false"><span class="domain-dot"></span><span class="domain-name">Speech Processing</span><span class="domain-count"></span></button></li>
+              <li><button type="button" class="domain-filter domain--genai" data-domain="genai" aria-pressed="false"><span class="domain-dot"></span><span class="domain-name">Generative Deep Learning</span><span class="domain-count"></span></button></li>
+              <li><button type="button" class="domain-filter domain--repr" data-domain="repr" aria-pressed="false"><span class="domain-dot"></span><span class="domain-name">Representation Learning</span><span class="domain-count"></span></button></li>
+              <li class="domain-group">Interdisciplinary</li>
+              <li><button type="button" class="domain-filter domain--hci" data-domain="hci" aria-pressed="false"><span class="domain-dot"></span><span class="domain-name">Human-Computer Interaction</span><span class="domain-count"></span></button></li>
+              <li><button type="button" class="domain-filter domain--bio" data-domain="bio" aria-pressed="false"><span class="domain-dot"></span><span class="domain-name">Computational Biology</span><span class="domain-count"></span></button></li>
+              <li><button type="button" class="domain-filter domain--edu" data-domain="edu" aria-pressed="false"><span class="domain-dot"></span><span class="domain-name">CS Education</span><span class="domain-count"></span></button></li>
+            </ul>
 
-    <section class="card">
-      <h2 class="section-title">Publications</h2>
-      <ol class="pub-list">
-        <li class="pub">
-          <span class="pub-venue">[VENUE 2026]</span>
-          <div>
-            <p class="pub-title">[Paper title]</p>
-            <p class="pub-authors"><strong>Arfatul Islam Asif</strong>, [Co-author], [Co-author]</p>
-            <div class="pub-links">
-              <a href="#">PDF</a>
-              <a href="#">Code</a>
-              <button type="button" class="pub-abs-toggle">Abstract</button>
-            </div>
-            <p class="pub-abstract" hidden>[Paper abstract.]</p>
+            <h2 class="sidebar-title sidebar-title--sections">Sections</h2>
+            <ul class="section-links">
+              <li><a href="#published" data-section-link="published"><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Published<span class="section-count"></span></a></li>
+              <li><a href="#submitted" data-section-link="submitted"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i>Submitted<span class="section-count"></span></a></li>
+              <li><a href="#thesis" data-section-link="thesis"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Thesis<span class="section-count"></span></a></li>
+              <li><a href="#in-preparation" data-section-link="in-preparation"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i>In preparation<span class="section-count"></span></a></li>
+              <li><a href="#datasets" data-section-link="datasets"><i class="fa-solid fa-database" aria-hidden="true"></i>Datasets<span class="section-count"></span></a></li>
+              <li><a href="#supervision" data-section-link="supervision"><i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i>My supervision<span class="section-count"></span></a></li>
+            </ul>
           </div>
-        </li>
-        <li class="pub">
-          <span class="pub-venue">[VENUE 2025]</span>
-          <div>
-            <p class="pub-title">[Paper title]</p>
-            <p class="pub-authors">[Co-author], <strong>Arfatul Islam Asif</strong></p>
-            <div class="pub-links">
-              <a href="#">PDF</a>
-              <button type="button" class="pub-abs-toggle">Abstract</button>
-            </div>
-            <p class="pub-abstract" hidden>[Paper abstract.]</p>
-          </div>
-        </li>
-      </ol>
-    </section>
+        </aside>
 
+      <div class="research-main">
+        <div class="filter-status" role="status" aria-live="polite" hidden>
+          <span>Showing <strong class="filter-count"></strong> in <span class="filter-name"></span></span>
+          <button type="button" class="filter-clear"><i class="fa-solid fa-xmark" aria-hidden="true"></i> Clear filter</button>
+        </div>
+
+        <!--
+          To add a research item, copy one <article class="card research-item"> block.
+          - data-domains: space-separated ids from the sidebar (cv, ml, nlp, speech, genai, repr, hci, bio, edu)
+          - images live in my_research/img/; several <img> tags in one frame alternate automatically
+        -->
+
+          <section class="research-section" id="published" data-section="published">
+            <h2 class="research-section-title"><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Published<span class="section-count"></span></h2>
+
+            <article class="card research-item" id="akkhorrekha" data-domains="cv ml">
+              <div class="research-media">
+                <button type="button" class="media-frame" aria-label="Enlarge image">
+                  <img src="img/akkhorrekha-1.webp" alt="First page of the AkkhorRekha paper" loading="lazy" decoding="async" class="is-active">
+                  <span class="media-zoom" aria-hidden="true"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                </button>
+              </div>
+              <div class="research-body">
+                <p class="research-status"><span class="status-pill status--published">Published</span><span class="research-venue">28th International Conference on Computer and Information Technology (ICCIT 2025), Cox&rsquo;s Bazar, Bangladesh</span></p>
+                <h3 class="research-title">AkkhorRekha: Content Independent Writer Verification System for Bangla Handwriting via Deep Metric Learning</h3>
+                <p class="research-authors"><strong>Arfatul Islam Asif</strong>, Sanjoy Das Joy, M. Shahidur Rahman<span class="role-tag">First author</span></p>
+                <p class="research-desc">This research introduces AkkhorRekha, a content-independent, open-set writer verification system specifically designed for Bangla handwriting. By employing a hierarchical deep metric learning approach, the pipeline extracts and pools local text patches into robust line and page descriptors without relying on the specific words being written. This allows the system to map handwriting features into a structured metric space, offering a highly scalable and robust solution for forensic analysis, document retrieval, and fraud detection.</p>
+                <div class="research-domains">
+                  <button type="button" class="domain-chip domain--cv" data-domain="cv">Computer Vision</button>
+                  <button type="button" class="domain-chip domain--ml" data-domain="ml">Machine Learning</button>
+                </div>
+                <div class="research-links">
+                  <a class="link-btn" href="https://doi.org/10.1109/ICCIT68739.2025.11491114" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i>IEEE Xplore</a>
+                  <a class="link-btn link-btn--doi" href="https://doi.org/10.1109/ICCIT68739.2025.11491114" target="_blank" rel="noopener"><span>DOI</span>10.1109/ICCIT68739.2025.11491114</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card research-item" id="digital-habits" data-domains="ml hci">
+              <div class="research-media">
+                <button type="button" class="media-frame" aria-label="Enlarge images">
+                  <img src="img/digital-habits-1.webp" alt="Graphical abstract: digital habits predict inattention, emotional distress predicts the rest" loading="lazy" decoding="async" class="is-active">
+                  <img src="img/digital-habits-2.webp" alt="Title page of the Brain and Behavior article" loading="lazy" decoding="async">
+                  <span class="media-zoom" aria-hidden="true"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                </button>
+              </div>
+              <div class="research-body">
+                <p class="research-status"><span class="status-pill status--published">Published</span><span class="research-venue">Brain and Behavior (Wiley), 2026</span></p>
+                <h3 class="research-title">Investigating the Impact of Fast-Paced Digital Content, Social Media Engagement, and Lifestyle Factors on Attention, Cognitive Load, and Behavioral Impulsivity: A Machine Learning Approach</h3>
+                <p class="research-authors"><strong>Arfatul Islam Asif</strong>, Sanjoy Das Joy, Mustakim Billah, Unayes Ahmed Khan, Ibnul Mansib, Sheikh Md. Azizul Hoque Munna, Anupam Kumar Bairagi, Abdullah Al Noman<span class="role-tag">First author</span></p>
+                <p class="research-desc">This study explores how fast-paced digital content, social media habits, and lifestyle factors predict subclinical cognitive outcomes like inattention, cognitive load, and impulsivity. By analyzing self-reported data from 301 young adults through four machine learning algorithms (KNN, SVR, RF, XGBoost), the research identifies the specific everyday behaviors that trigger cognitive strain. The findings reveal that digital usage habits (like unintended scrolling) primarily drive attention deficits, whereas underlying emotional distress and lifestyle factors are the strongest predictors for cognitive load and behavioral impulsivity.</p>
+                <div class="research-domains">
+                  <button type="button" class="domain-chip domain--ml" data-domain="ml">Machine Learning</button>
+                  <button type="button" class="domain-chip domain--hci" data-domain="hci">HCI</button>
+                </div>
+                <div class="research-links">
+                  <a class="link-btn" href="https://doi.org/10.1002/brb3.71651" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i>Wiley Online Library</a>
+                  <a class="link-btn link-btn--doi" href="https://doi.org/10.1002/brb3.71651" target="_blank" rel="noopener"><span>DOI</span>10.1002/brb3.71651</a>
+                  <a class="link-btn" href="#dataset-digital-habits"><i class="fa-solid fa-database" aria-hidden="true"></i>Dataset</a>
+                </div>
+              </div>
+            </article>
+
+          </section>
+
+          <section class="research-section" id="submitted" data-section="submitted">
+            <h2 class="research-section-title"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i>Submitted<span class="section-count"></span></h2>
+
+            <article class="card research-item" id="writer-framework" data-domains="cv ml">
+              <div class="research-media">
+                <button type="button" class="media-frame" aria-label="Enlarge images">
+                  <img src="img/writer-framework-1.webp" alt="Output of multi-writer segmentation on pages with one to four writers" loading="lazy" decoding="async" class="is-active">
+                  <img src="img/writer-framework-2.webp" alt="Dual-Path Patch Encoder (DPE-Net) architecture" loading="lazy" decoding="async">
+                  <img src="img/writer-framework-3.webp" alt="Patch-to-line encoding pipeline with mean pooling" loading="lazy" decoding="async">
+                  <span class="media-zoom" aria-hidden="true"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                </button>
+              </div>
+              <div class="research-body">
+                <p class="research-status"><span class="status-pill status--submitted">Under review</span><span class="research-venue">Submitted to <em>Pattern Analysis and Applications</em>, 2026</span></p>
+                <h3 class="research-title">A Unified Framework for Open-Set Bengali Handwriting Analysis: Writer Verification, Retrieval, Clustering, and Sequential Multi-Writer Segmentation</h3>
+                <p class="research-authors"><strong>Arfatul Islam Asif</strong><span class="role-tag">First author</span></p>
+                <p class="research-desc">This research introduces a comprehensive deep embedding framework for offline Bengali handwriting analysis, capable of executing writer verification, retrieval, clustering, and sequential multi-writer segmentation on full documents. To isolate true biometric handwriting styles from page layout noise, a novel geometry-aware Patch-to-Line-to-Page hierarchical integration pipeline was developed. By engineering an ultra-lightweight custom CNN (DPE-Net) and adapting a pretrained SOTA model (FasterNet-T0), the system operates entirely under a zero-shot, open-set paradigm, making it highly scalable for real-world forensic and archival processing on resource-constrained edge devices.</p>
+                <div class="research-domains">
+                  <button type="button" class="domain-chip domain--cv" data-domain="cv">Computer Vision</button>
+                  <button type="button" class="domain-chip domain--ml" data-domain="ml">Machine Learning</button>
+                </div>
+              </div>
+            </article>
+
+          </section>
+
+          <section class="research-section" id="thesis" data-section="thesis">
+            <h2 class="research-section-title"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Thesis<span class="section-count"></span></h2>
+
+            <article class="card research-item" id="thesis" data-domains="genai speech nlp">
+              <div class="research-media">
+                <button type="button" class="media-frame" aria-label="Enlarge images">
+                  <img src="img/thesis-1.webp" alt="Regional accent-distance heatmap across eight regions" loading="lazy" decoding="async" class="is-active">
+                  <img src="img/thesis-2.webp" alt="Mean F0 by region for female and male speakers" loading="lazy" decoding="async">
+                  <img src="img/thesis-3.webp" alt="A participant recording in the sound-treated lab" loading="lazy" decoding="async">
+                  <img src="img/thesis-4.webp" alt="A participant reading the script in the lab" loading="lazy" decoding="async">
+                  <img src="img/thesis-5.webp" alt="SUST Kotha app: speech dataset threads" loading="lazy" decoding="async">
+                  <img src="img/thesis-6.webp" alt="SUST Kotha app: recording screen" loading="lazy" decoding="async">
+                  <span class="media-zoom" aria-hidden="true"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                </button>
+              </div>
+              <div class="research-body">
+                <p class="research-status"><span class="status-pill status--thesis">Thesis</span><span class="research-venue">B.Sc. Thesis, Shahjalal University of Science and Technology (SUST), Sylhet, July 2026</span></p>
+                <h3 class="research-title">Bangla Speech-to-Speech Voice Cloning and Accent Conversion Using a Novel Parallel Accent Corpus</h3>
+                <p class="research-authors"><strong>Arfatul Islam Asif</strong><span class="role-tag">Co-author (undergraduate researcher)</span></p>
+                <p class="research-supervisor">Supervisor: <a href="https://scholar.google.com/citations?user=EKkysqUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. M. Shahidur Rahman</a></p>
+                <p class="research-desc">This thesis builds upon the Bangla Parallel Accent Corpus (BPAC) to establish the first direct, textless speech-to-speech baseline for Bangla. Rather than relying on a speech-to-text-to-speech cascade (which destroys natural prosody and timbre), the research evaluates four major generative families for zero-shot voice cloning. Furthermore, it tackles the much harder problem of regional accent conversion&mdash;shifting a speaker&rsquo;s regional accent while perfectly preserving their unique voice&mdash;by developing a custom adversarial disentanglement model (PPG-FAC) and adapting a pretrained controllable-conversion pipeline (Vevo-style).</p>
+                <div class="research-domains">
+                  <button type="button" class="domain-chip domain--genai" data-domain="genai">Generative Deep Learning</button>
+                  <button type="button" class="domain-chip domain--speech" data-domain="speech">Speech Processing</button>
+                  <button type="button" class="domain-chip domain--nlp" data-domain="nlp">NLP</button>
+                </div>
+              </div>
+            </article>
+
+          </section>
+
+          <section class="research-section" id="in-preparation" data-section="in-preparation">
+            <h2 class="research-section-title"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i>In preparation<span class="section-count"></span></h2>
+
+            <article class="card research-item" id="bpac-paper" data-domains="nlp ml">
+              <div class="research-media">
+                <button type="button" class="media-frame" aria-label="Enlarge image">
+                  <img src="img/bpac-1.webp" alt="The BPAC dataset page on Hugging Face" loading="lazy" decoding="async" class="is-active">
+                  <span class="media-zoom" aria-hidden="true"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                </button>
+              </div>
+              <div class="research-body">
+                <p class="research-status"><span class="status-pill status--in-preparation">In preparation</span><span class="research-venue">In preparation</span></p>
+                <h3 class="research-title">BPAC: How Detectable is Regional Accent in Read Bangla? A Parallel Corpus and its Phonetic Structure</h3>
+                <p class="research-authors"><strong>Arfatul Islam Asif</strong><span class="role-tag">First author</span></p>
+                <p class="research-desc">This research introduces BPAC, the first fully parallel, 8-region acoustic speech corpus for Bangla, explicitly designed to decouple regional accents from lexical variation. By having 51 speakers read an identical script, the study quantifies regional accent severity through Speech-to-Text degradation and self-supervised neural embeddings. The research ultimately shifts Bangla dialectology from subjective transcription to objective acoustic mathematics, challenging century-old hypotheses about Bengali consonant shifts and revealing that segmental duration, rather than spectral quality, primarily drives regional accent differentiation.</p>
+                <div class="research-domains">
+                  <button type="button" class="domain-chip domain--nlp" data-domain="nlp">NLP</button>
+                  <button type="button" class="domain-chip domain--ml" data-domain="ml">Machine Learning</button>
+                </div>
+                <div class="research-links">
+                  <a class="link-btn" href="https://huggingface.co/datasets/ArfatulAsif/BPAC" target="_blank" rel="noopener"><span class="hf-emoji" aria-hidden="true">&#129303;</span>Hugging Face</a>
+                  <a class="link-btn" href="#dataset-bpac"><i class="fa-solid fa-database" aria-hidden="true"></i>Dataset</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card research-item" id="ecg" data-domains="ml bio repr">
+              <div class="research-media">
+                <button type="button" class="media-frame" aria-label="Enlarge images">
+                  <img src="img/ecg-1.webp" alt="ECG examples from the baseline corruption engine" loading="lazy" decoding="async" class="is-active">
+                  <img src="img/ecg-2.webp" alt="Clean vs baseline vs latent-corrupted ECG overlay" loading="lazy" decoding="async">
+                  <img src="img/ecg-3.webp" alt="SNR correlation scatter comparing baseline and latent engines" loading="lazy" decoding="async">
+                  <span class="media-zoom" aria-hidden="true"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                </button>
+              </div>
+              <div class="research-body">
+                <p class="research-status"><span class="status-pill status--in-preparation">In preparation</span><span class="research-venue">In preparation</span></p>
+                <h3 class="research-title">Artifact-Aware ECG Representation Learning for Robust Signal Reconstruction</h3>
+                <p class="research-authors"><strong>Arfatul Islam Asif</strong><span class="role-tag">Co-author (undergraduate researcher)</span></p>
+                <p class="research-desc">Deep learning for automated ECG analysis is highly vulnerable to real-world clinical artifacts like baseline wander, muscle interference, and lead detachment. This research introduces a novel spatio-temporal framework (utilizing Masked Autoencoders and the AUREC Nexus architecture) to learn robust, geometrically invariant representations of 12-lead ECG signals. By simulating biophysically realistic, coupled acquisition failures and using uncertainty-guided representation learning, the model successfully reconstructs pristine cardiac morphology under severe noise, recovering diagnostic utility far better than conventional denoising methods.</p>
+                <div class="research-domains">
+                  <button type="button" class="domain-chip domain--ml" data-domain="ml">Machine Learning</button>
+                  <button type="button" class="domain-chip domain--bio" data-domain="bio">Computational Biology</button>
+                  <button type="button" class="domain-chip domain--repr" data-domain="repr">Representation Learning</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card research-item" id="master-sorter" data-domains="cv ml nlp">
+              <div class="research-media research-media--icon" aria-hidden="true">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <div class="research-body">
+                <p class="research-status"><span class="status-pill status--in-preparation">In preparation</span><span class="research-venue">In preparation</span></p>
+                <h3 class="research-title">Restructuring Unordered Handwritten Document Pools: A Decoupled Biometric&ndash;Semantic&ndash;Sequential Cascade</h3>
+                <p class="research-authors"><strong>Arfatul Islam Asif</strong><span class="role-tag">First author / Co-author</span></p>
+                <p class="research-desc">The mass digitization of archival records often yields chaotic, unordered pools of scanned handwritten pages where writer identity, document boundaries, and page order are lost. This research introduces a fully unsupervised, three-stage cascade model that restructures these pools by sequentially grouping pages by biometric style (writer), semantic content (document), and sequential discourse (page order) without closed-set assumptions. By utilizing an oracle-grouping error attribution protocol, the system successfully isolates bottlenecks and demonstrates that handwriting-text-recognition (HTR) quality is the dominant factor in document reconstruction.</p>
+                <div class="research-domains">
+                  <button type="button" class="domain-chip domain--cv" data-domain="cv">Computer Vision</button>
+                  <button type="button" class="domain-chip domain--ml" data-domain="ml">Machine Learning</button>
+                  <button type="button" class="domain-chip domain--nlp" data-domain="nlp">NLP</button>
+                </div>
+                <div class="research-links">
+                  <a class="link-btn" href="#dataset-master-sorter"><i class="fa-solid fa-database" aria-hidden="true"></i>Dataset</a>
+                </div>
+              </div>
+            </article>
+
+          </section>
+
+          <section class="research-section" id="datasets" data-section="datasets">
+            <h2 class="research-section-title"><i class="fa-solid fa-database" aria-hidden="true"></i>Datasets<span class="section-count"></span></h2>
+
+            <article class="card research-item" id="dataset-bpac" data-domains="nlp ml">
+              <div class="research-media">
+                <button type="button" class="media-frame" aria-label="Enlarge image">
+                  <img src="img/bpac-1.webp" alt="The BPAC dataset page on Hugging Face" loading="lazy" decoding="async" class="is-active">
+                  <span class="media-zoom" aria-hidden="true"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                </button>
+              </div>
+              <div class="research-body">
+                <p class="research-status"><span class="status-pill status--datasets">Dataset</span><span class="research-venue">Public on Hugging Face &middot; CC BY-NC 4.0</span></p>
+                <h3 class="research-title">BPAC: Bangla Parallel Accent Corpus</h3>
+                <p class="research-desc">A strictly parallel speech corpus for Bangla regional-accent research: 51 native speakers (26 male, 25 female, aged 19&ndash;25) from 8 regions of Bangladesh read the same phonetically diverse 250-sentence script, so region and speaker vary while the content stays fixed. Released as a 16 kHz working tier and a native-rate original tier for high-fidelity acoustic measurement.</p>
+                <ul class="dataset-facts"><li>27.7 hours</li><li>12,747 utterances</li><li>51 speakers</li><li>8 regions</li><li>17.8 GB</li></ul>
+                <div class="research-domains">
+                  <button type="button" class="domain-chip domain--nlp" data-domain="nlp">NLP</button>
+                  <button type="button" class="domain-chip domain--ml" data-domain="ml">Machine Learning</button>
+                </div>
+                <div class="research-links">
+                  <a class="link-btn" href="https://huggingface.co/datasets/ArfatulAsif/BPAC" target="_blank" rel="noopener"><span class="hf-emoji" aria-hidden="true">&#129303;</span>Hugging Face</a>
+                  <a class="link-btn link-btn--doi" href="https://doi.org/10.57967/hf/10299" target="_blank" rel="noopener"><span>DOI</span>10.57967/hf/10299</a>
+                </div>
+                <p class="research-related"><i class="fa-solid fa-link" aria-hidden="true"></i> Related: <a href="#bpac-paper">BPAC paper (in preparation)</a></p>
+              </div>
+            </article>
+
+            <article class="card research-item" id="dataset-digital-habits" data-domains="ml hci">
+              <div class="research-media">
+                <button type="button" class="media-frame" aria-label="Enlarge image">
+                  <img src="img/digital-habits-1.webp" alt="Graphical abstract of the companion study" loading="lazy" decoding="async" class="is-active">
+                  <span class="media-zoom" aria-hidden="true"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                </button>
+              </div>
+              <div class="research-body">
+                <p class="research-status"><span class="status-pill status--datasets">Dataset</span><span class="research-venue">Available on reasonable request</span></p>
+                <h3 class="research-title">AI and Mental Health: Digital Habits, Lifestyle &amp; Cognition Survey</h3>
+                <p class="research-desc">Self-reported survey responses from 301 young adults in Bangladesh, collected June&ndash;August 2025 through a custom web app, with no missing values. 55 five-point Likert items: 25 predictors (tech-usage habits and lifestyle/psychosocial factors) and 30 outcome items measuring attention, cognitive load and behavioral impulsivity. Only anonymized Likert responses are shared.</p>
+                <ul class="dataset-facts"><li>301 participants</li><li>55 items</li><li>Jun&ndash;Aug 2025</li></ul>
+                <div class="research-domains">
+                  <button type="button" class="domain-chip domain--ml" data-domain="ml">Machine Learning</button>
+                  <button type="button" class="domain-chip domain--hci" data-domain="hci">HCI</button>
+                </div>
+                <div class="research-links">
+                  <a class="link-btn" href="mailto:arfatulislam2001@gmail.com?subject=Dataset%20request%3A%20Digital%20habits%20survey"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Request access</a>
+                </div>
+                <p class="research-related"><i class="fa-solid fa-link" aria-hidden="true"></i> Related: <a href="#digital-habits">Brain and Behavior paper</a></p>
+              </div>
+            </article>
+
+            <article class="card research-item" id="dataset-master-sorter" data-domains="cv ml nlp">
+              <div class="research-media research-media--icon" aria-hidden="true">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <div class="research-body">
+                <p class="research-status"><span class="status-pill status--datasets">Dataset</span><span class="research-venue">Available on reasonable request</span></p>
+                <h3 class="research-title">Master Sorter: Multi-Writer Handwritten Page Corpus</h3>
+                <p class="research-desc">A supervised multi-writer corpus of intact scanned handwritten pages, written as dense plain prose on academic prompts with no figures, headers or other layout cues. Every page is labelled with writer identity, document identity and within-document page order, and the pages are split writer-disjointly into training, validation and test pools.</p>
+                <ul class="dataset-facts"><li>1,700+ pages</li><li>Writer, document &amp; page-order labels</li></ul>
+                <div class="research-domains">
+                  <button type="button" class="domain-chip domain--cv" data-domain="cv">Computer Vision</button>
+                  <button type="button" class="domain-chip domain--ml" data-domain="ml">Machine Learning</button>
+                  <button type="button" class="domain-chip domain--nlp" data-domain="nlp">NLP</button>
+                </div>
+                <div class="research-links">
+                  <a class="link-btn" href="mailto:arfatulislam2001@gmail.com?subject=Dataset%20request%3A%20Master%20Sorter%20corpus"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Request access</a>
+                </div>
+                <p class="research-related"><i class="fa-solid fa-link" aria-hidden="true"></i> Related: <a href="#master-sorter">Cascade paper (in preparation)</a></p>
+              </div>
+            </article>
+
+            <article class="card research-item" id="dataset-multi-writer" data-domains="cv ml">
+              <div class="research-media">
+                <button type="button" class="media-frame" aria-label="Enlarge image">
+                  <img src="img/writer-framework-1.webp" alt="Multi-writer Bangla handwritten pages" loading="lazy" decoding="async" class="is-active">
+                  <span class="media-zoom" aria-hidden="true"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                </button>
+              </div>
+              <div class="research-body">
+                <p class="research-status"><span class="status-pill status--datasets">Dataset</span><span class="research-venue">Available on reasonable request</span></p>
+                <h3 class="research-title">Bangla Multi-Writer Handwriting Corpus</h3>
+                <p class="research-desc">A supervised multi-writer corpus of Bangla handwriting in continuous plain prose. Every page is annotated with writer identity, document grouping and within-document page order, for multi-writer segmentation, page ordering, writer identification and handwriting recognition research.</p>
+                <ul class="dataset-facts"><li>301 pages</li><li>Writer, document &amp; page-order labels</li></ul>
+                <div class="research-domains">
+                  <button type="button" class="domain-chip domain--cv" data-domain="cv">Computer Vision</button>
+                  <button type="button" class="domain-chip domain--ml" data-domain="ml">Machine Learning</button>
+                </div>
+                <div class="research-links">
+                  <a class="link-btn" href="mailto:arfatulislam2001@gmail.com?subject=Dataset%20request%3A%20Bangla%20multi-writer%20corpus"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Request access</a>
+                </div>
+              </div>
+            </article>
+
+          </section>
+
+          <section class="research-section" id="supervision" data-section="supervision">
+            <h2 class="research-section-title"><i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i>My supervision<span class="section-count"></span></h2>
+            <p class="section-intro">Undergraduate research projects under my supervision.</p>
+            <ol class="supervision-list">
+              <li class="supervision-item" data-domains="cv ml">
+                <span class="supervision-num" aria-hidden="true">01</span>
+                <div class="supervision-body">
+                  <h3 class="supervision-title">BDRiverVessel: A Multi-View Primary Dataset and View-Conditioned Explainable Deep Learning Framework for Inland Waterway Vessel Detection in Bangladesh</h3>
+                  <p class="supervision-students"><i class="fa-solid fa-user-group" aria-hidden="true"></i> Nazmul Hasan, Mahdi Hasan Mehedi</p>
+                  <div class="research-domains">
+                    <button type="button" class="domain-chip domain--cv" data-domain="cv">Computer Vision</button>
+                    <button type="button" class="domain-chip domain--ml" data-domain="ml">Machine Learning</button>
+                  </div>
+                </div>
+              </li>
+              <li class="supervision-item" data-domains="cv ml">
+                <span class="supervision-num" aria-hidden="true">02</span>
+                <div class="supervision-body">
+                  <h3 class="supervision-title">Machine Learning-Based Shelf-Life Prediction of Selected Fruits and Vegetables Using Visual and Storage-Condition Data</h3>
+                  <p class="supervision-students"><i class="fa-solid fa-user-group" aria-hidden="true"></i> Auditi Sinha, Mahia Tabassum Chowdhury</p>
+                  <div class="research-domains">
+                    <button type="button" class="domain-chip domain--cv" data-domain="cv">Computer Vision</button>
+                    <button type="button" class="domain-chip domain--ml" data-domain="ml">Machine Learning</button>
+                  </div>
+                </div>
+              </li>
+              <li class="supervision-item" data-domains="cv edu">
+                <span class="supervision-num" aria-hidden="true">03</span>
+                <div class="supervision-body">
+                  <h3 class="supervision-title">Vision-Based Detection and Severity Classification of Road Damage / Potholes in South Asian Urban Environments</h3>
+                  <p class="supervision-students"><i class="fa-solid fa-user-group" aria-hidden="true"></i> Abu Sayed, Tanwin Ahmed Chowdhury Nafi</p>
+                  <div class="research-domains">
+                    <button type="button" class="domain-chip domain--cv" data-domain="cv">Computer Vision</button>
+                    <button type="button" class="domain-chip domain--edu" data-domain="edu">CS Education</button>
+                  </div>
+                </div>
+              </li>
+              <li class="supervision-item" data-domains="cv">
+                <span class="supervision-num" aria-hidden="true">04</span>
+                <div class="supervision-body">
+                  <h3 class="supervision-title">Field Data &amp; Image Recognition Proposals</h3>
+                  <ul class="supervision-options">
+                    <li>Early Detection of Tea Leaf Diseases Using CNN-Based Image Classification: A Field-Collected Dataset from Sylhet Tea Gardens</li>
+                    <li>Digitizing Handwritten Medical Prescriptions in Bangladesh Using Vision-Based OCR: A Locally Collected Dataset of Mixed Bangla-English Clinical Handwriting</li>
+                    <li>Detecting Tourist Plastic Waste in Natural Environments Using Object Detection: A Locally Collected Dataset from Sylhet&rsquo;s Tourist Sites</li>
+                  </ul>
+                  <p class="supervision-students"><i class="fa-solid fa-user-group" aria-hidden="true"></i> Tushar Sarker, Soumik Shuvo Pandit</p>
+                  <div class="research-domains">
+                    <button type="button" class="domain-chip domain--cv" data-domain="cv">Computer Vision</button>
+                  </div>
+                </div>
+              </li>
+              <li class="supervision-item" data-domains="cv ml">
+                <span class="supervision-num" aria-hidden="true">05</span>
+                <div class="supervision-body">
+                  <h3 class="supervision-title">TouristSafe-Sylhet: Cross-Site Vision-Based Overcrowding Detection and Policy-Compliance Auditing for Boat Tourism in Sylhet</h3>
+                  <p class="supervision-students"><i class="fa-solid fa-user-group" aria-hidden="true"></i> Altaf Hosen, Md. Mehedi Hasan</p>
+                  <div class="research-domains">
+                    <button type="button" class="domain-chip domain--cv" data-domain="cv">Computer Vision</button>
+                    <button type="button" class="domain-chip domain--ml" data-domain="ml">Machine Learning</button>
+                  </div>
+                </div>
+              </li>
+              <li class="supervision-item" data-domains="ml bio">
+                <span class="supervision-num" aria-hidden="true">06</span>
+                <div class="supervision-body">
+                  <h3 class="supervision-title">Development and Validation of an Explainable Machine Learning Model for Predicting Early Clinical Deterioration in Guillain&ndash;Barr&eacute; Syndrome Using Pretreatment Clinical Data</h3>
+                  <p class="supervision-students"><i class="fa-solid fa-user-group" aria-hidden="true"></i> Fariha Akter Nusrat, Sakira Khan</p>
+                  <div class="research-domains">
+                    <button type="button" class="domain-chip domain--ml" data-domain="ml">Machine Learning</button>
+                    <button type="button" class="domain-chip domain--bio" data-domain="bio">Computational Biology</button>
+                  </div>
+                </div>
+              </li>
+              <li class="supervision-item" data-domains="ml">
+                <span class="supervision-num" aria-hidden="true">07</span>
+                <div class="supervision-body">
+                  <h3 class="supervision-title">Barriers and Challenges Confronting Female Students in Higher Education</h3>
+                  <p class="supervision-students"><i class="fa-solid fa-user-group" aria-hidden="true"></i> Ilteza Rahman Urme, Maeesha Ishrat</p>
+                  <div class="research-domains">
+                    <button type="button" class="domain-chip domain--ml" data-domain="ml">Machine Learning</button>
+                  </div>
+                </div>
+              </li>
+              <li class="supervision-item" data-domains="cv ml">
+                <span class="supervision-num" aria-hidden="true">08</span>
+                <div class="supervision-body">
+                  <h3 class="supervision-title">Multi-Scene Real-vs-Synthetic Classification of South Asian Ambient Soundscapes: An Evaluation of Situational and Cross-Tool Variation</h3>
+                  <p class="supervision-students"><i class="fa-solid fa-user-group" aria-hidden="true"></i> Maliha Mohammed Rim, Fahima Akhter Liza</p>
+                  <div class="research-domains">
+                    <button type="button" class="domain-chip domain--cv" data-domain="cv">Computer Vision</button>
+                    <button type="button" class="domain-chip domain--ml" data-domain="ml">Machine Learning</button>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </section>
+      </div>
+    </div>
   </main>
+
+  <!-- Full-size image viewer -->
+  <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+    <button type="button" class="lightbox-btn lightbox-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <button type="button" class="lightbox-btn lightbox-prev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+    <figure class="lightbox-figure">
+      <img class="lightbox-img" src="" alt="">
+      <figcaption class="lightbox-caption"></figcaption>
+    </figure>
+    <button type="button" class="lightbox-btn lightbox-next" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+  </dialog>
 
   <footer id="site-footer" class="site-footer"></footer>
 
   <!-- Shared site script, then this page's script -->
-  <script src="../script.js?v=20260926b"></script>
-  <script src="script.js?v=20260926b"></script>
+  <script src="../script.js?v=20261007"></script>
+  <script src="script.js?v=20261007"></script>
 </body>
 </html>
