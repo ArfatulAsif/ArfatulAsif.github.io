@@ -220,7 +220,7 @@ if (!reduceMotion) {
           // Wait until the next picture has loaded, so the frame never goes blank.
           const next = gallery.slides[(gallery.index + 1) % gallery.slides.length];
           if (next.complete && next.naturalWidth > 0) showSlide(gallery, gallery.index + 1);
-        }, 3500);
+        }, 2000);
       }, n * 900);
     });
 }
