@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Arfatul Islam Asif</title>
+  <meta name="description" content="Projects by Arfatul Islam Asif: AI platforms, hackathon-winning systems and full-stack applications.">
 
   <!-- Apply saved theme before paint to avoid a flash -->
   <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t);else if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.setAttribute("data-theme","dark");}catch(e){}</script>
@@ -15,8 +16,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <!-- Shared site styles, then this page's styles -->
-  <link rel="stylesheet" href="../style.css?v=20261007f">
-  <link rel="stylesheet" href="style.css?v=20261007f">
+  <link rel="stylesheet" href="../style.css?v=20261007g">
+  <link rel="stylesheet" href="style.css?v=20261007g">
 </head>
 
 <body data-page="projects" data-root="../">
@@ -25,52 +26,280 @@
   <main class="container">
     <header class="page-header">
       <h1>Projects</h1>
-      <p>[Things I have built.]</p>
+      <p>AI platforms, hackathon projects and full-stack systems I have built.</p>
     </header>
 
     <div class="project-filters" role="group" aria-label="Filter projects">
-      <button type="button" class="is-active" data-filter="all">All</button>
-      <button type="button" data-filter="ml">ML</button>
-      <button type="button" data-filter="web">Web</button>
-      <button type="button" data-filter="systems">Systems</button>
+      <button type="button" class="project-filter is-active" data-filter="all" aria-pressed="true">All <span class="filter-count"></span></button>
+      <button type="button" class="project-filter" data-filter="ai" aria-pressed="false">AI-powered <span class="filter-count"></span></button>
+      <button type="button" class="project-filter" data-filter="web" aria-pressed="false">Web <span class="filter-count"></span></button>
+      <button type="button" class="project-filter" data-filter="award" aria-pressed="false">Awards &amp; finals <span class="filter-count"></span></button>
+      <button type="button" class="project-filter" data-filter="other" aria-pressed="false">Hardware &amp; games <span class="filter-count"></span></button>
     </div>
 
+    <!--
+      To add a project, copy one <article class="card project"> block.
+      data-tags: any of ai, web, award, other. Several <img> tags in one frame alternate automatically;
+      add class="is-card" to an image that should be shown whole (e.g. a GitHub preview card).
+    -->
     <div class="project-grid">
-      <article class="card project" data-tags="ml">
-        <h2>[Project name]</h2>
-        <p>[Short description: the problem, what you built, and the outcome.]</p>
-        <ul class="chips"><li>ML</li></ul>
-        <div class="project-links">
-          <a href="#"><i class="fa-brands fa-github"></i> Code</a>
-          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+      <article class="card project" id="tikasheba" data-tags="ai web award">
+        <div class="project-media">
+          <button type="button" class="media-frame" aria-label="Enlarge images of TikaSheba">
+            <img src="img/tikasheba-1.webp" alt="TikaSheba home page: smart, accessible vaccination for everyone" decoding="async" class="is-active">
+            <img src="img/tikasheba-2.webp" alt="TikaSheba login page" loading="lazy" decoding="async">
+            <img src="img/tikasheba-3.webp" alt="Scheduling a vaccine and finding available centres on the map" loading="lazy" decoding="async">
+          </button>
+          <span class="project-award project-award--gold"><i class="fa-solid fa-trophy" aria-hidden="true"></i><strong>Champion</strong> &middot; NEUB ICT Fest 2025 Hackathon</span>
+        </div>
+        <div class="project-body">
+          <div class="project-head">
+            <h2 class="project-title">TikaSheba</h2>
+            <span class="project-date">Nov 2025</span>
+          </div>
+          <p class="project-desc">We built a complete end-to-end vaccination management platform for Bangladesh, handling everything from registry import to appointment scheduling, certificate issuance, and nationwide stock tracking. The system empowers citizens with nearby center discovery, dynamic scheduling, e-Tika verification, and OCR-based registration of old handwritten cards. By integrating all major stakeholders and embedding AI-driven demand forecasting, we modernized and streamlined the entire national vaccination workflow.</p>
+          <button type="button" class="project-more" hidden>Read more</button>
+          <ul class="project-skills"><li>Retrieval-Augmented Generation (RAG)</li><li>Machine Learning</li></ul>
+          <p class="project-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>With Unayes and Mutaher Ahmed</p>
+          <div class="project-foot">
+            <a class="project-link" href="https://github.com/Mutah3r/TikaSheba-NEUB-Hackathon" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a>
+            <span class="project-assoc" title="Associated with Shahjalal University of Science and Technology"><img src="../education/bsc.png" alt="" width="18" height="18">SUST</span>
+          </div>
         </div>
       </article>
-      <article class="card project" data-tags="web">
-        <h2>[Project name]</h2>
-        <p>[Short description: the problem, what you built, and the outcome.]</p>
-        <ul class="chips"><li>Web</li></ul>
-        <div class="project-links">
-          <a href="#"><i class="fa-brands fa-github"></i> Code</a>
-          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+      <article class="card project" id="thryve" data-tags="ai web award">
+        <div class="project-media">
+          <button type="button" class="media-frame" aria-label="Enlarge images of Thryve">
+            <img src="img/thryve-1.webp" alt="Thryve landing page: from idea to impact, effortlessly" decoding="async" class="is-active">
+            <img src="img/thryve-2.webp" alt="Thryve dashboard with competitor channels and generated thumbnails" loading="lazy" decoding="async">
+            <img src="img/thryve-github.webp" alt="The Thryve repository on GitHub" loading="lazy" decoding="async" class="is-card">
+          </button>
+          <span class="project-award project-award--silver"><i class="fa-solid fa-medal" aria-hidden="true"></i><strong>1st Runner-up</strong> &middot; HackTheAI 2025, out of 250+ teams</span>
+        </div>
+        <div class="project-body">
+          <div class="project-head">
+            <h2 class="project-title">Thryve</h2>
+            <span class="project-date">Sep 2025</span>
+          </div>
+          <p class="project-desc">An AI-powered platform designed to supercharge YouTube content creation. Our tool lets you analyze your own channel and competitors, find content gaps and generate the next video ideas based on trends, comments, gaps, and past videos, auto-generate voiceovers with cloning, create and edit thumbnails, generate reels and much more.</p>
+          <button type="button" class="project-more" hidden>Read more</button>
+          <ul class="project-skills"><li>Python</li><li>AI Agents</li></ul>
+          <p class="project-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>With Unayes and Shahiduzzaman</p>
+          <div class="project-foot">
+            <a class="project-link" href="https://github.com/Unayes09/Thryve-Youtubers-Toolkit-SmythOS-HackTheAI-2025" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a>
+          </div>
         </div>
       </article>
-      <article class="card project" data-tags="systems ml">
-        <h2>[Project name]</h2>
-        <p>[Short description: the problem, what you built, and the outcome.]</p>
-        <ul class="chips"><li>Systems</li><li>ML</li></ul>
-        <div class="project-links">
-          <a href="#"><i class="fa-brands fa-github"></i> Code</a>
-          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+      <article class="card project" id="wellspring" data-tags="ai web">
+        <div class="project-media">
+          <button type="button" class="media-frame" aria-label="Enlarge images of WellSpring">
+            <img src="img/wellspring-1.webp" alt="WellSpring home page: personalized mental health support" decoding="async" class="is-active">
+            <img src="img/wellspring-github.webp" alt="The WellSpring repository on GitHub" loading="lazy" decoding="async" class="is-card">
+          </button>
+        </div>
+        <div class="project-body">
+          <div class="project-head">
+            <h2 class="project-title">WellSpring</h2>
+            <span class="project-date">Feb 2025 &ndash; Jul 2025</span>
+          </div>
+          <p class="project-desc">WellSpring is an AI-powered platform that supports your mental wellness by helping you track your routine, mood, and activities and by offering insights through psychological assessments based on standardized medical tools.</p>
+          <button type="button" class="project-more" hidden>Read more</button>
+          <div class="project-foot">
+            <a class="project-link" href="https://github.com/MBillahsust/WellSpring" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a>
+            <span class="project-assoc" title="Associated with Shahjalal University of Science and Technology"><img src="../education/bsc.png" alt="" width="18" height="18">SUST</span>
+          </div>
+        </div>
+      </article>
+      <article class="card project" id="ecommerce" data-tags="web">
+        <div class="project-media">
+          <button type="button" class="media-frame" aria-label="Enlarge image of E-commerce Ecosystem">
+            <img src="img/ecommerce-github.webp" alt="The E-commerce Ecosystem repository on GitHub" decoding="async" class="is-active is-card">
+          </button>
+        </div>
+        <div class="project-body">
+          <div class="project-head">
+            <h2 class="project-title">E-commerce Ecosystem</h2>
+            <span class="project-date">Jan 2025</span>
+          </div>
+          <p class="project-desc">This project simulates a gaming-themed e-commerce platform, LEVEL UP, with an integrated Bank for transactions. Users buy gaming products, while suppliers fulfill orders and pay a 20% commission. Linked bank accounts enable seamless payments, and all interactions are managed via APIs. It showcases the core functionality of an e-commerce ecosystem.</p>
+          <button type="button" class="project-more" hidden>Read more</button>
+          <ul class="project-skills"><li>React.js</li><li>JavaScript</li></ul>
+          <p class="project-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>With Mutaher Ahmed</p>
+          <div class="project-foot">
+            <a class="project-link" href="https://github.com/ArfatulAsif/E-commerce-ecosystem-FULL-STACK-PROJECT" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a>
+            <span class="project-assoc" title="Associated with Shahjalal University of Science and Technology"><img src="../education/bsc.png" alt="" width="18" height="18">SUST</span>
+          </div>
+        </div>
+      </article>
+      <article class="card project" id="easybanglish" data-tags="ai web award">
+        <div class="project-media">
+          <button type="button" class="media-frame" aria-label="Enlarge image of EasyBanglish">
+            <img src="img/easybanglish-1.webp" alt="EasyBanglish home page: enhance your Bangla stories" decoding="async" class="is-active">
+          </button>
+          <span class="project-award project-award--bronze"><i class="fa-solid fa-medal" aria-hidden="true"></i><strong>2nd Runner-up</strong> &middot; KUET BITFEST National Hackathon 2025</span>
+        </div>
+        <div class="project-body">
+          <div class="project-head">
+            <h2 class="project-title">EasyBanglish</h2>
+            <span class="project-date">Jan 2025</span>
+          </div>
+          <p class="project-desc">This project involves developing a Banglish (Bangla written in English) to Bangla conversion application (Web + Mobile), equipped with AI-powered content writing and formatting features. It also offers multiple collaboration options and AI-integrated fast content-based query handling, making it a comprehensive tool for seamless Bangla content creation and interaction.</p>
+          <button type="button" class="project-more" hidden>Read more</button>
+          <ul class="project-skills"><li>JavaScript</li><li>HTML</li></ul>
+          <p class="project-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>With Unayes and Mutaher Ahmed</p>
+          <div class="project-foot">
+            <a class="project-link" href="https://github.com/ArfatulAsif/EasyBanglish-ONTORPONTHIK-KUET-BITFEST-2025" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a>
+            <span class="project-assoc" title="Associated with Shahjalal University of Science and Technology"><img src="../education/bsc.png" alt="" width="18" height="18">SUST</span>
+          </div>
+        </div>
+      </article>
+      <article class="card project" id="delivery-robot" data-tags="other">
+        <div class="project-media">
+          <button type="button" class="media-frame" aria-label="Enlarge image of Delivery Robot">
+            <img src="img/delivery-robot-github.webp" alt="The Delivery Robot repository on GitHub" decoding="async" class="is-active is-card">
+          </button>
+        </div>
+        <div class="project-body">
+          <div class="project-head">
+            <h2 class="project-title">Delivery Robot</h2>
+            <span class="project-date">May 2024 &ndash; Jun 2024</span>
+          </div>
+          <p class="project-desc">Arduino based project.</p>
+          <button type="button" class="project-more" hidden>Read more</button>
+          <ul class="project-skills"><li>Arduino IDE</li><li>C++</li></ul>
+          <div class="project-foot">
+            <a class="project-link" href="https://github.com/ArfatulAsif/Delivery-Robot-Arduino-Project" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a>
+            <span class="project-assoc" title="Associated with Shahjalal University of Science and Technology"><img src="../education/bsc.png" alt="" width="18" height="18">SUST</span>
+          </div>
+        </div>
+      </article>
+      <article class="card project" id="ecosync" data-tags="web award">
+        <div class="project-media">
+          <button type="button" class="media-frame" aria-label="Enlarge image of EcoSync">
+            <img src="img/ecosync-1.webp" alt="EcoSync screenshots: the DNCC waste management home page" decoding="async" class="is-active pos-center">
+          </button>
+          <span class="project-award project-award--finalist"><i class="fa-solid fa-flag-checkered" aria-hidden="true"></i><strong>Finalist</strong> &middot; Code Samurai 2024</span>
+        </div>
+        <div class="project-body">
+          <div class="project-head">
+            <h2 class="project-title">EcoSync</h2>
+            <span class="project-date">May 2024</span>
+          </div>
+          <p class="project-desc">This project was built for Code Samurai 2024 (Team ONTORPONTHIK). EcoSync is a waste management solution for Dhaka, Bangladesh, focusing on better collection, service quality, and community awareness. It offers a web app with features like real-time tracking, contractor management, bill generation, and optimized collection plans to create a cleaner, healthier city.</p>
+          <button type="button" class="project-more" hidden>Read more</button>
+          <ul class="project-skills"><li>JavaScript</li><li>HTML</li></ul>
+          <p class="project-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>With Unayes and Mutaher Ahmed</p>
+          <div class="project-foot">
+            <a class="project-link" href="https://github.com/Mutah3r/cs24-p2-ONTORPONTHIK" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a>
+            <span class="project-assoc" title="Associated with Shahjalal University of Science and Technology"><img src="../education/bsc.png" alt="" width="18" height="18">SUST</span>
+          </div>
+        </div>
+      </article>
+      <article class="card project" id="coursecraft" data-tags="web">
+        <div class="project-media">
+          <button type="button" class="media-frame" aria-label="Enlarge image of CourseCraftOnline">
+            <img src="img/coursecraft-github.webp" alt="The CourseCraftOnline repository on GitHub" decoding="async" class="is-active is-card">
+          </button>
+        </div>
+        <div class="project-body">
+          <div class="project-head">
+            <h2 class="project-title">CourseCraftOnline</h2>
+            <span class="project-date">Mar 2024</span>
+          </div>
+          <p class="project-subtitle">Online Course Management System</p>
+          <p class="project-desc">In the realm of education, efficient management of courses is essential for smooth operation and effective learning outcomes. Inspired by the need for a robust system to facilitate course management, CourseCraftOnline (CCO) was conceived. CourseCraftOnline aims to streamline processes and enhance user experience within educational institutions.</p>
+          <button type="button" class="project-more" hidden>Read more</button>
+          <ul class="project-skills"><li>Servlets</li><li>JavaServer Pages (JSP)</li></ul>
+          <div class="project-foot">
+            <a class="project-link" href="https://github.com/ArfatulAsif/CourseCraftOnline-JavaServlet-Project" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a>
+            <span class="project-assoc" title="Associated with Shahjalal University of Science and Technology"><img src="../education/bsc.png" alt="" width="18" height="18">SUST</span>
+          </div>
+        </div>
+      </article>
+      <article class="card project" id="studyhelp" data-tags="web">
+        <div class="project-media">
+          <button type="button" class="media-frame" aria-label="Enlarge image of OnlineStudyHelpBD">
+            <img src="img/studyhelp-github.webp" alt="The OnlineStudyHelpBD repository on GitHub" decoding="async" class="is-active is-card">
+          </button>
+        </div>
+        <div class="project-body">
+          <div class="project-head">
+            <h2 class="project-title">OnlineStudyHelpBD</h2>
+            <span class="project-date">Nov 2023 &ndash; Dec 2023</span>
+          </div>
+          <p class="project-desc">OnlineStudyHelpBD is a comprehensive platform facilitating seamless interaction between students and teachers, offering a dynamic Q&amp;A environment. This project was built using the Java Spring Boot framework.</p>
+          <button type="button" class="project-more" hidden>Read more</button>
+          <ul class="project-skills"><li>HTML</li><li>Object-Oriented Programming (OOP)</li></ul>
+          <div class="project-foot">
+            <a class="project-link" href="https://github.com/ArfatulAsif/OnlineStudyHelpBD-SpringBoot-Project" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a>
+            <span class="project-assoc" title="Associated with Shahjalal University of Science and Technology"><img src="../education/bsc.png" alt="" width="18" height="18">SUST</span>
+          </div>
+        </div>
+      </article>
+      <article class="card project" id="disaster" data-tags="web award">
+        <div class="project-media">
+          <button type="button" class="media-frame" aria-label="Enlarge images of Emergency Disaster Management System">
+            <img src="img/disaster-1.webp" alt="Emergency Disaster Management System (EDMS) home page" decoding="async" class="is-active">
+            <img src="img/disaster-2.webp" alt="EDMS pages for shelters, social and contact" loading="lazy" decoding="async">
+            <img src="img/disaster-github.webp" alt="The EDMS repository on GitHub" loading="lazy" decoding="async" class="is-card">
+          </button>
+          <span class="project-award project-award--finalist"><i class="fa-solid fa-flag-checkered" aria-hidden="true"></i><strong>Finalist</strong> &middot; Therap JavaFest 2023</span>
+        </div>
+        <div class="project-body">
+          <div class="project-head">
+            <h2 class="project-title">Emergency Disaster Management System</h2>
+            <span class="project-date">Sep 2023 &ndash; Oct 2023</span>
+          </div>
+          <p class="project-desc">In a world prone to unexpected natural and man-made disasters, the need for efficient and swift emergency response systems cannot be overstated. Bangladesh&rsquo;s unique geographical and environmental challenges stand as a testament to the importance of effective disaster management.</p>
+          <button type="button" class="project-more" hidden>Read more</button>
+          <ul class="project-skills"><li>HTML</li><li>Presentation Skills</li></ul>
+          <p class="project-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>With Unayes</p>
+          <div class="project-foot">
+            <a class="project-link" href="https://github.com/ArfatulAsif/emergency-disaster-management-system" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a>
+            <span class="project-assoc" title="Associated with Shahjalal University of Science and Technology"><img src="../education/bsc.png" alt="" width="18" height="18">SUST</span>
+          </div>
+        </div>
+      </article>
+      <article class="card project" id="mazegame" data-tags="other">
+        <div class="project-media">
+          <button type="button" class="media-frame" aria-label="Enlarge images of MazeGame">
+            <img src="img/mazegame-1.webp" alt="Maze Game title screen" decoding="async" class="is-active">
+            <img src="img/mazegame-2.webp" alt="Maze Game main menu" loading="lazy" decoding="async">
+            <img src="img/mazegame-github.webp" alt="The MazeGame repository on GitHub" loading="lazy" decoding="async" class="is-card">
+          </button>
+        </div>
+        <div class="project-body">
+          <div class="project-head">
+            <h2 class="project-title">MazeGame</h2>
+            <span class="project-date">Jun 2023 &ndash; Aug 2023</span>
+          </div>
+          <p class="project-desc">This is a gaming project called &lsquo;Maze Game&rsquo;. I built it using the JavaFX framework.</p>
+          <button type="button" class="project-more" hidden>Read more</button>
+          <ul class="project-skills"><li>JavaFX</li><li>Java</li></ul>
+          <div class="project-foot">
+            <a class="project-link" href="https://github.com/ArfatulAsif/MazeGame-javafx-Project" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a>
+            <span class="project-assoc" title="Associated with Shahjalal University of Science and Technology"><img src="../education/bsc.png" alt="" width="18" height="18">SUST</span>
+          </div>
         </div>
       </article>
     </div>
-
   </main>
+
+  <!-- Full-size image viewer -->
+  <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+    <button type="button" class="lightbox-btn lightbox-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <button type="button" class="lightbox-btn lightbox-prev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+    <figure class="lightbox-figure">
+      <img class="lightbox-img" src="" alt="">
+      <figcaption class="lightbox-caption"></figcaption>
+    </figure>
+    <button type="button" class="lightbox-btn lightbox-next" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+  </dialog>
 
   <footer id="site-footer" class="site-footer"></footer>
 
   <!-- Shared site script, then this page's script -->
-  <script src="../script.js?v=20261007f"></script>
-  <script src="script.js?v=20261007f"></script>
+  <script src="../script.js?v=20261007g"></script>
+  <script src="script.js?v=20261007g"></script>
 </body>
 </html>
