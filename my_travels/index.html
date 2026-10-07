@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travels | Arfatul Islam Asif</title>
+  <meta name="description" content="Travel stories by Arfatul Islam Asif, and his goal of visiting 50 countries before 35.">
 
   <!-- Apply saved theme before paint to avoid a flash -->
   <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t);else if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.setAttribute("data-theme","dark");}catch(e){}</script>
@@ -15,8 +16,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <!-- Shared site styles, then this page's styles -->
-  <link rel="stylesheet" href="../style.css?v=20261007n">
-  <link rel="stylesheet" href="style.css?v=20261007n">
+  <link rel="stylesheet" href="../style.css?v=20261007o">
+  <link rel="stylesheet" href="style.css?v=20261007o">
 </head>
 
 <body data-page="travels" data-root="../">
@@ -25,42 +26,69 @@
   <main class="container">
     <header class="page-header">
       <h1>Travels</h1>
-      <p>[Places I have been, for conferences and for fun.]</p>
+      <p>Stories, routes and real budgets from my trips.</p>
     </header>
 
-    <div class="place-grid">
-      <figure class="card place">
-        <!-- Put photos in my_travels/img/ and set src, e.g. img/city.jpg -->
-        <div class="place-photo" role="img" aria-label="Photo placeholder"><i class="fa-solid fa-image"></i></div>
-        <figcaption>
-          <strong>[City]</strong>, [Country]
-          <span class="muted">[Mon YYYY]</span>
-        </figcaption>
-      </figure>
-      <figure class="card place">
-        <!-- Put photos in my_travels/img/ and set src, e.g. img/city.jpg -->
-        <div class="place-photo" role="img" aria-label="Photo placeholder"><i class="fa-solid fa-image"></i></div>
-        <figcaption>
-          <strong>[City]</strong>, [Country]
-          <span class="muted">[Mon YYYY]</span>
-        </figcaption>
-      </figure>
-      <figure class="card place">
-        <!-- Put photos in my_travels/img/ and set src, e.g. img/city.jpg -->
-        <div class="place-photo" role="img" aria-label="Photo placeholder"><i class="fa-solid fa-image"></i></div>
-        <figcaption>
-          <strong>[City]</strong>, [Country]
-          <span class="muted">[Mon YYYY]</span>
-        </figcaption>
-      </figure>
-    </div>
+    <!-- ===== The goal (update the visited list and the count as you travel) ===== -->
+    <section class="card goal-card" aria-labelledby="goal-title">
+      <div class="goal-text">
+        <p class="goal-kicker"><i class="fa-solid fa-earth-asia" aria-hidden="true"></i>My travel goal</p>
+        <h2 class="goal-title" id="goal-title">Travel to at least <strong>50 countries</strong> before I turn 35.</h2>
+        <div class="goal-visited">
+          <p class="goal-visited-label">Visited so far</p>
+          <ul class="goal-flags"><li><img class="flag" src="img/flags/my.svg" alt="" width="24" height="18">Malaysia</li><li><img class="flag" src="img/flags/np.svg" alt="" width="24" height="18">Nepal</li><li><img class="flag" src="img/flags/in.svg" alt="" width="24" height="18">India</li></ul>
+        </div>
+      </div>
+      <div class="goal-ring" style="--pct: 6.0" role="img" aria-label="3 of 50 countries visited">
+        <div class="goal-ring-inner">
+          <strong>3</strong>
+          <span>of 50 countries</span>
+        </div>
+      </div>
+    </section>
 
+    <!-- ===== Stories ===== -->
+    <section class="travel-section" aria-labelledby="stories-title">
+      <h2 class="travel-section-title" id="stories-title"><i class="fa-solid fa-book-open" aria-hidden="true"></i>Travel stories</h2>
+      <div class="trip-grid">
+        <a class="card trip-card" href="malaysia-2025/index.html">
+          <span class="trip-cover"><img src="malaysia-2025/img/park-entry.webp" alt="KLCC Park and the Kuala Lumpur skyline" loading="lazy"></span>
+          <span class="trip-body">
+            <span class="trip-kicker"><img class="flag" src="img/flags/my.svg" alt="" width="20" height="15">Malaysia · Solo trip</span>
+            <span class="trip-title">Seven days solo in Malaysia</span>
+            <span class="trip-meta">May 2025 · 7 days</span>
+            <span class="trip-dek">Kuala Lumpur and Penang on a student budget: skyscrapers, Batu Caves, George Town’s street art, and a lot of kindness from strangers.</span>
+            <span class="trip-more">Read the story <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </span>
+        </a>
+        <a class="card trip-card" href="nepal-2025/index.html">
+          <span class="trip-cover"><img src="nepal-2025/img/sarangkot-sunrise2.webp" alt="The Annapurna range from Sarangkot" loading="lazy"></span>
+          <span class="trip-body">
+            <span class="trip-kicker"><img class="flag" src="img/flags/np.svg" alt="" width="20" height="15">Nepal · With a friend</span>
+            <span class="trip-title">Six days in Nepal</span>
+            <span class="trip-meta">Mar 2025 · 6 days</span>
+            <span class="trip-dek">Kathmandu’s temples, Bhaktapur’s old city and a Himalayan sunrise at Nagarkot, then bungee jumping and paragliding in Pokhara with my childhood friend.</span>
+            <span class="trip-more">Read the story <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </span>
+        </a>
+        <a class="card trip-card" href="india-shillong/index.html">
+          <span class="trip-cover"><img src="india-shillong/cover.svg" alt="Illustration of green hills and a waterfall" loading="lazy"></span>
+          <span class="trip-body">
+            <span class="trip-kicker"><img class="flag" src="img/flags/in.svg" alt="" width="20" height="15">India · Meghalaya</span>
+            <span class="trip-title">Shillong in five days</span>
+            <span class="trip-meta">5-day guide</span>
+            <span class="trip-dek">A guide to the “Scotland of the East”: crossing at Dawki, Police Bazar, Cherrapunjee’s waterfalls and caves, Asia’s cleanest village and the crystal-clear Umngot river.</span>
+            <span class="trip-more">Read the story <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </span>
+        </a>
+      </div>
+    </section>
   </main>
 
   <footer id="site-footer" class="site-footer"></footer>
 
   <!-- Shared site script, then this page's script -->
-  <script src="../script.js?v=20261007n"></script>
-  <script src="script.js?v=20261007n"></script>
+  <script src="../script.js?v=20261007o"></script>
+  <script src="script.js?v=20261007o"></script>
 </body>
 </html>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of green hills and a waterfall">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b9e0e3"/>
+      <stop offset="0.6" stop-color="#dff1ea"/>
+      <stop offset="1" stop-color="#eef7ee"/>
+    </linearGradient>
+    <linearGradient id="fall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d6eef2"/>
+    </linearGradient>
+    <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#sky)"/>
+  <circle cx="985" cy="180" r="62" fill="#fff1bf"/>
+  <circle cx="985" cy="180" r="92" fill="#fff1bf" opacity="0.35"/>
+
+  <!-- clouds -->
+  <g fill="#ffffff" opacity="0.85">
+    <ellipse cx="250" cy="150" rx="110" ry="26"/>
+    <ellipse cx="310" cy="132" rx="70" ry="30"/>
+    <ellipse cx="760" cy="110" rx="90" ry="20"/>
+    <ellipse cx="810" cy="96" rx="52" ry="22"/>
+  </g>
+
+  <!-- far hills -->
+  <path d="M0 380 C 140 300 260 330 380 290 C 520 245 640 310 760 280 C 900 245 1020 300 1140 270 C 1200 255 1250 262 1280 270 L1280 720 L0 720 Z" fill="#a9d1bb"/>
+  <rect y="300" width="1280" height="120" fill="url(#mist)"/>
+
+  <!-- middle hills with a cliff -->
+  <path d="M0 470 C 120 410 230 420 330 380 C 420 345 470 350 520 360 L 600 360 L 620 520 L 0 560 Z" fill="#74b08f"/>
+  <path d="M600 360 C 700 340 820 380 920 360 C 1040 335 1160 380 1280 360 L1280 720 L620 720 Z" fill="#6aa686"/>
+  <path d="M560 352 L 640 348 L 652 560 L 548 560 Z" fill="#5b8f74"/>
+
+  <!-- waterfall -->
+  <path d="M582 352 C 586 420 590 480 584 560 L 612 560 C 606 480 610 420 616 352 Z" fill="url(#fall)"/>
+  <ellipse cx="598" cy="566" rx="70" ry="14" fill="#cfeef3"/>
+  <ellipse cx="598" cy="566" rx="40" ry="7" fill="#ffffff" opacity="0.8"/>
+
+  <!-- front hills -->
+  <path d="M0 560 C 160 500 300 540 440 520 C 560 503 640 560 760 548 C 900 534 1040 500 1280 540 L1280 720 L0 720 Z" fill="#3f7d5e"/>
+  <path d="M0 640 C 200 600 380 640 560 620 C 760 598 960 650 1280 610 L1280 720 L0 720 Z" fill="#2f6a4d"/>
+
+  <!-- pine trees -->
+  <g fill="#24543d">
+    <path d="M150 560 l 22 -70 l 22 70 z"/><path d="M190 568 l 16 -52 l 16 52 z"/>
+    <path d="M1040 540 l 24 -76 l 24 76 z"/><path d="M1084 548 l 18 -56 l 18 56 z"/><path d="M1120 552 l 14 -44 l 14 44 z"/>
+  </g>
+  <g fill="#1d4a34">
+    <path d="M320 640 l 26 -80 l 26 80 z"/><path d="M365 646 l 18 -58 l 18 58 z"/>
+    <path d="M880 632 l 22 -70 l 22 70 z"/>
+  </g>
+</svg>

@@ -1,46 +1,295 @@
-/* Travels page styles (shared styles are in ../style.css) */
+/* Travels styles (shared site styles are in ../style.css).
+   Used by the Travels page and by every travel story (stories add blog.css on top). */
 
-.place-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 24px;
+.flag {
+  flex: none;
+  width: 22px;
+  height: auto;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
-.place-grid .card + .card {
+/* ---------- The goal ---------- */
+.goal-card {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 32px;
+  padding: 30px 34px;
+}
+
+/* a soft glow in the corner */
+.goal-card::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -80px;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--pill-hover), transparent 70%);
+  pointer-events: none;
+}
+
+.goal-text,
+.goal-ring {
+  position: relative;
+}
+
+.goal-kicker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.goal-title {
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.goal-title strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.goal-visited {
+  margin-top: 22px;
+}
+
+.goal-visited-label {
+  margin: 0 0 8px;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.goal-flags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.goal-flags li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px 5px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--pill-bg);
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+/* Progress ring: --pct is the share of the goal reached (0 to 100) */
+.goal-ring {
+  width: 168px;
+  height: 168px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: conic-gradient(var(--accent) calc(var(--pct) * 1%), var(--pill-hover) 0);
+}
+
+.goal-ring-inner {
+  width: 134px;
+  height: 134px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--surface);
+  text-align: center;
+}
+
+.goal-ring-inner strong {
+  color: var(--accent);
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.goal-ring-inner span {
+  margin-top: 4px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+/* ---------- Sections ---------- */
+.travel-section {
+  margin-top: 40px;
+}
+
+.travel-section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  color: var(--accent);
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.travel-section-title i {
+  font-size: 1.05rem;
+}
+
+/* ---------- Trip cards ---------- */
+.trip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.trip-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.trip-grid .card + .card {
   margin-top: 0;
 }
 
-.place {
-  margin: 0;
-  padding: 12px;
-}
-
-.place img,
-.place-photo {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.place-photo {
-  display: grid;
-  place-items: center;
-  background: var(--pill-hover);
-  color: var(--accent);
-  font-size: 2rem;
-}
-
-.place figcaption {
+.trip-card {
+  overflow: hidden;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 4px 12px;
-  padding: 12px 6px 4px;
+  flex-direction: column;
+  padding: 0;
+  color: var(--text);
+  transition: border-color 0.15s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-@media (max-width: 400px) {
-  .place-grid {
+.trip-card:hover {
+  text-decoration: none;
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+  box-shadow: 0 10px 28px rgba(16, 24, 40, 0.1);
+  transform: translateY(-3px);
+}
+
+.trip-cover {
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--pill-bg);
+}
+
+.trip-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.trip-card:hover .trip-cover img {
+  transform: scale(1.04);
+}
+
+.trip-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px 20px;
+}
+
+.trip-kicker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.trip-title {
+  margin-top: 8px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.trip-meta {
+  margin-top: 2px;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.trip-dek {
+  margin-top: 10px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.trip-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 16px;
+  color: var(--link);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.trip-more i {
+  font-size: 0.78rem;
+  transition: transform 0.15s ease;
+}
+
+.trip-card:hover .trip-more i {
+  transform: translateX(4px);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .trip-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .goal-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    padding: 24px 22px;
+  }
+
+  .goal-title {
+    font-size: 1.5rem;
+  }
+
+  .goal-ring {
+    justify-self: start;
+    width: 140px;
+    height: 140px;
+  }
+
+  .goal-ring-inner {
+    width: 110px;
+    height: 110px;
+  }
+
+  .goal-ring-inner strong {
+    font-size: 2.1rem;
+  }
+
+  .trip-grid,
+  .trip-grid--two {
     grid-template-columns: minmax(0, 1fr);
   }
 }

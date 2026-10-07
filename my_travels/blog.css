@@ -1,0 +1,914 @@
+/* Travel story styles, shared by every story in my_travels/<trip>/.
+   Loaded after ../../style.css (site) and ../style.css (Travels). */
+
+/* ---------- Breadcrumb ---------- */
+.crumbs {
+  margin: 20px 0 0;
+  font-size: 0.88rem;
+}
+
+.crumbs a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.crumbs a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.crumbs i {
+  font-size: 0.75rem;
+  transition: transform 0.15s ease;
+}
+
+.crumbs a:hover i {
+  transform: translateX(-3px);
+}
+
+/* ---------- Hero ---------- */
+.post-hero {
+  margin: 18px 0 32px;
+}
+
+.post-kicker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.post-kicker .flag {
+  width: 24px;
+}
+
+.post-title {
+  max-width: 900px;
+  margin: 10px 0 10px;
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.post-dek {
+  max-width: 780px;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1.12rem;
+  line-height: 1.6;
+}
+
+.post-facts {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+.post-facts li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 13px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+
+.post-facts i {
+  color: var(--accent);
+  font-size: 0.82rem;
+}
+
+.post-cover {
+  margin: 26px 0 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--pill-bg);
+  box-shadow: var(--shadow);
+}
+
+.post-cover img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+}
+
+/* ---------- Layout: contents on the left, story on the right ---------- */
+.post-layout {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.post-aside {
+  position: sticky;
+  top: calc(var(--nav-height) + 16px);
+  display: grid;
+  gap: 16px;
+  max-height: calc(100vh - var(--nav-height) - 32px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+
+.post-aside .card + .card {
+  margin-top: 0;
+}
+
+.aside-title {
+  margin: 0 0 10px;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.post-toc {
+  padding: 16px 12px 12px;
+}
+
+.post-toc .aside-title {
+  margin-left: 8px;
+}
+
+.post-toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1px;
+}
+
+.post-toc a {
+  display: block;
+  padding: 6px 10px;
+  border-left: 2px solid transparent;
+  border-radius: 0 8px 8px 0;
+  color: var(--text);
+  font-size: 0.86rem;
+  line-height: 1.35;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.post-toc a:hover {
+  background: var(--pill-bg);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.post-toc a.is-active {
+  border-left-color: var(--accent);
+  background: var(--pill-hover);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.post-glance {
+  padding: 16px 18px;
+}
+
+.post-glance dl {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.post-glance dt {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.post-glance dd {
+  margin: 1px 0 0;
+  font-size: 0.86rem;
+  line-height: 1.4;
+}
+
+/* ---------- Story text ---------- */
+.post-body {
+  min-width: 0;
+  max-width: 780px;
+}
+
+.chapter {
+  scroll-margin-top: calc(var(--nav-height) + 20px);
+}
+
+.chapter + .chapter {
+  margin-top: 44px;
+  padding-top: 36px;
+  border-top: 1px solid var(--border);
+}
+
+.chapter-head {
+  margin-bottom: 14px;
+}
+
+.chapter-kicker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 12px;
+  margin: 0 0 6px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.chapter-badge {
+  padding: 1px 11px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.8;
+}
+
+.chapter-title {
+  margin: 0;
+  font-size: 1.65rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.post-body p,
+.story-list {
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.post-body p {
+  margin: 0 0 14px;
+}
+
+.post-body strong {
+  font-weight: 600;
+}
+
+.story-place {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 28px 0 10px;
+  color: var(--accent);
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.story-place i {
+  font-size: 0.9rem;
+}
+
+.story-list {
+  margin: 0 0 16px;
+  padding-left: 24px;
+}
+
+.story-list li + li {
+  margin-top: 2px;
+}
+
+.story-list li::marker {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.story-signoff {
+  margin-top: 22px !important;
+  color: var(--accent);
+  font-size: 1.1rem !important;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Money */
+.cost {
+  display: inline-block;
+  padding: 0 9px;
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--border));
+  border-radius: 999px;
+  background: var(--pill-hover);
+  color: var(--accent);
+  font-size: 0.85em;
+  font-weight: 600;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+.post-body p.cost-line {
+  margin: -4px 0 14px;
+}
+
+.day-total {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 0 0 !important;
+  padding: 12px 16px;
+  border: 1px dashed color-mix(in srgb, var(--accent) 45%, var(--border));
+  border-radius: 12px;
+  background: var(--pill-bg);
+  font-size: 0.95rem !important;
+}
+
+.day-total i {
+  color: var(--accent);
+}
+
+/* Tips */
+.story-tip {
+  display: flex;
+  gap: 14px;
+  margin: 6px 0 18px;
+  padding: 14px 18px;
+  border-left: 4px solid #e2a400;
+  border-radius: 0 12px 12px 0;
+  background: #fff8e1;
+}
+
+.story-tip i {
+  margin-top: 5px;
+  color: #b07d00;
+  font-size: 1.05rem;
+}
+
+.post-body .story-tip p {
+  margin: 0;
+  font-size: 0.97rem;
+}
+
+:root[data-theme="dark"] .story-tip {
+  border-left-color: #d9a520;
+  background: rgba(217, 165, 32, 0.12);
+}
+
+:root[data-theme="dark"] .story-tip i {
+  color: #f2c94c;
+}
+
+/* ---------- Photos ---------- */
+.story-figure {
+  margin: 8px 0 22px;
+}
+
+.story-figure figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.story-figure figcaption i {
+  color: var(--accent);
+}
+
+.story-photo {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 12px;
+  background: var(--pill-bg);
+  cursor: zoom-in;
+}
+
+.story-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.35s ease, filter 0.2s ease;
+}
+
+.story-photo:hover img {
+  transform: scale(1.03);
+}
+
+.story-photo:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* one photo: shown whole; tall photos are kept to a sensible height */
+.is-single.is-landscape .story-photo {
+  box-shadow: var(--shadow);
+}
+
+.is-single.is-portrait .story-photo {
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.is-single.is-portrait .story-photo img {
+  width: auto;
+  max-width: 100%;
+  max-height: 560px;
+}
+
+.is-single.is-icon .story-photo {
+  width: 220px;
+  margin: 0 auto;
+}
+
+/* route maps: smaller, framed */
+.is-map .story-photo {
+  max-width: 560px;
+  margin: 0 auto;
+  border: 1px solid var(--border);
+}
+
+.is-map figcaption {
+  font-size: 0.82rem;
+}
+
+/* several photos: an even grid */
+.story-grid {
+  display: grid;
+  gap: 8px;
+}
+
+.cols-2 .story-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cols-3 .story-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.is-grid .story-photo {
+  border-radius: 10px;
+}
+
+.is-grid .story-photo img {
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.is-grid.is-portrait .story-photo img {
+  aspect-ratio: 3 / 4;
+}
+
+/* ---------- Costs ---------- */
+.cost-card {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  margin: 4px 0 18px;
+  padding: 22px 24px;
+}
+
+.cost-card:has(.cost-parts) {
+  grid-template-columns: 230px minmax(0, 1fr);
+}
+
+.cost-card:not(:has(.cost-parts)) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.cost-total {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cost-total-label {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cost-total strong {
+  color: var(--accent);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.cost-total-note {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.cost-parts {
+  display: grid;
+  gap: 8px;
+  padding-left: 24px;
+  border-left: 1px solid var(--border);
+}
+
+.cost-parts div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 0.92rem;
+}
+
+.cost-parts span {
+  color: var(--text-muted);
+}
+
+.cost-parts strong {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.table-wrap {
+  margin: 0 0 16px;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.cost-table caption {
+  padding: 12px 16px 8px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.cost-table th,
+.cost-table td {
+  padding: 10px 16px;
+  border-top: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.cost-table thead th {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.cost-table tbody th {
+  font-weight: 500;
+}
+
+.cost-table td {
+  font-variant-numeric: tabular-nums;
+}
+
+.cost-table tbody tr:hover {
+  background: var(--pill-bg);
+}
+
+/* ---------- Collapsible extras (itemised costs, itinerary) ---------- */
+.story-details {
+  margin: 0 0 8px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.story-details summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  color: var(--accent);
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none;
+}
+
+.story-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.story-details summary::before {
+  content: "\f054"; /* Font Awesome chevron */
+  font-family: "Font Awesome 6 Free";
+  font-size: 0.72rem;
+  font-weight: 900;
+  transition: transform 0.15s ease;
+}
+
+.story-details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.story-details[open] summary {
+  border-bottom: 1px solid var(--border);
+}
+
+.itemised {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 28px;
+  padding: 14px 18px 16px;
+}
+
+.itemised h4 {
+  margin: 10px 0 4px;
+  color: var(--accent);
+  font-size: 0.92rem;
+}
+
+.itemised ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.plan-body {
+  padding: 8px 20px 18px;
+}
+
+.plan-body h4 {
+  margin: 20px 0 8px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.plan-body h4:first-child {
+  margin-top: 6px;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.plan-body h5 {
+  margin: 14px 0 6px;
+  color: var(--accent);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.plan-body ul,
+.plan-body ol {
+  margin: 0 0 8px;
+  padding-left: 22px;
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.plan-body li + li {
+  margin-top: 3px;
+}
+
+.post-body .plan-body p {
+  margin: 6px 0 10px;
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+/* ---------- Guide lists (Shillong) ---------- */
+.place-list {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  margin: 6px 0 18px;
+  padding: 0;
+}
+
+.place-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  background: var(--surface);
+}
+
+.place-list strong {
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.place-list span {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+/* ---------- More stories ---------- */
+.more-trips {
+  margin-top: 56px;
+  padding-top: 36px;
+  border-top: 1px solid var(--border);
+}
+
+.more-title {
+  margin: 0 0 16px;
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+/* ---------- Full-size photo viewer ---------- */
+.lightbox {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  margin: 0;
+  padding: 16px;
+  border: 0;
+  background: transparent;
+}
+
+.lightbox[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.lightbox::backdrop {
+  background: rgba(10, 12, 14, 0.92);
+}
+
+.lightbox-figure {
+  margin: 0;
+  max-width: min(1280px, calc(100vw - 140px));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: calc(100vh - 110px);
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.lightbox-caption {
+  color: #e6e8eb;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.lightbox-btn {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+
+.lightbox-btn:hover {
+  background: rgba(255, 255, 255, 0.26);
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .post-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  /* contents become a row of chips above the story */
+  .post-aside {
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .post-toc ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .post-toc a {
+    padding: 4px 12px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 0.82rem;
+  }
+
+  .post-toc a.is-active {
+    border-color: var(--accent);
+  }
+
+  .post-glance dl {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+
+  .post-body {
+    max-width: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .post-title {
+    font-size: 1.9rem;
+  }
+
+  .post-dek {
+    font-size: 1rem;
+  }
+
+  .post-cover img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .chapter-title {
+    font-size: 1.4rem;
+  }
+
+  .post-body p,
+  .story-list {
+    font-size: 0.98rem;
+  }
+
+  .cols-3 .story-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cost-card,
+  .cost-card:has(.cost-parts) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .cost-parts {
+    padding-left: 0;
+    padding-top: 14px;
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .itemised {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lightbox-figure {
+    max-width: calc(100vw - 32px);
+  }
+
+  .lightbox-prev,
+  .lightbox-next {
+    position: fixed;
+    bottom: 16px;
+  }
+
+  .lightbox-prev {
+    left: calc(50% - 56px);
+  }
+
+  .lightbox-next {
+    right: calc(50% - 56px);
+  }
+
+  .lightbox-img {
+    max-height: calc(100vh - 170px);
+  }
+}
