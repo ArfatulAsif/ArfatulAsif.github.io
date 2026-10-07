@@ -169,20 +169,27 @@
 /* Award ribbon on the image */
 .project-award {
   position: absolute;
-  top: 12px;
-  left: 12px;
-  right: 12px;
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
+  top: 14px;
+  left: 14px;
+  display: inline-block;
   width: fit-content;
-  max-width: calc(100% - 24px);
-  padding: 4px 11px;
-  border-radius: 999px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
-  font-size: 0.74rem;
-  line-height: 1.35;
+  max-width: calc(100% - 28px);
+  padding: 7px 15px;
+  border-radius: 18px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.22);
+  font-size: 0.86rem;
+  line-height: 1.4;
   pointer-events: none;
+}
+
+.project-award i {
+  margin-right: 7px;
+  font-size: 1rem;
+}
+
+/* keep "1st Runner-up" etc. on one line */
+.project-award strong {
+  white-space: nowrap;
 }
 
 .project-award strong {
@@ -324,6 +331,28 @@
   text-decoration: none;
   border-color: var(--accent);
   color: var(--accent);
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* the live site gets the filled accent button */
+.project-link--live {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+.project-link--live i {
+  font-size: 0.7rem;
+}
+
+.project-link--live:hover {
+  color: var(--accent-contrast);
+  filter: brightness(1.08);
 }
 
 .project-assoc {
