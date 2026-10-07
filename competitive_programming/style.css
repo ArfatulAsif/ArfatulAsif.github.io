@@ -17,116 +17,6 @@ code {
   font-size: 0.88em;
 }
 
-/* ---------- Layout: blog on the left, everything else on the right ---------- */
-.cp-layout {
-  display: grid;
-  grid-template-columns: 250px minmax(0, 1fr);
-  gap: 24px;
-  align-items: start;
-}
-
-.cp-main {
-  min-width: 0;
-}
-
-.cp-aside {
-  position: sticky;
-  top: calc(var(--nav-height) + 16px);
-}
-
-.blog-card {
-  padding: 18px 14px;
-}
-
-.blog-title {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 0 6px 4px;
-  color: var(--accent);
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.blog-group {
-  margin: 14px 6px 6px;
-  color: var(--text-muted);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.blog-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr); /* let long repo names shorten with "…" */
-  gap: 6px;
-}
-
-.blog-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 9px 10px;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: var(--pill-bg);
-  color: var(--text);
-  transition: border-color 0.15s ease, transform 0.15s ease;
-}
-
-.blog-link:hover {
-  text-decoration: none;
-  border-color: var(--accent);
-  transform: translateX(2px);
-}
-
-.blog-icon {
-  flex: none;
-  width: 32px;
-  height: 32px;
-  display: grid;
-  place-items: center;
-  border-radius: 8px;
-  background: var(--pill-hover);
-  color: var(--accent);
-  font-size: 0.85rem;
-}
-
-.blog-text {
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  line-height: 1.3;
-}
-
-.blog-text strong {
-  font-size: 0.86rem;
-  font-weight: 500;
-}
-
-.blog-text small {
-  overflow: hidden;
-  color: var(--text-muted);
-  font-size: 0.72rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.blog-ext {
-  flex: none;
-  margin-left: auto;
-  color: var(--text-muted);
-  font-size: 0.66rem;
-}
-
-.blog-link:hover .blog-ext {
-  color: var(--accent);
-}
-
 /* ---------- ICPC ---------- */
 .icpc-card {
   position: relative;
@@ -249,7 +139,7 @@ code {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  padding: 20px 16px 16px;
+  padding: 22px 20px 18px;
 }
 
 .judge::before {
@@ -361,10 +251,9 @@ code {
 
 .judge-stats div {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 0 10px;
-  font-size: 0.8rem;
+  gap: 10px;
+  font-size: 0.82rem;
 }
 
 .judge-stats dt {
@@ -376,6 +265,107 @@ code {
   font-weight: 500;
   font-variant-numeric: tabular-nums;
   text-align: right;
+}
+
+/* ---------- CP blog & resources (one row of cards) ---------- */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.blog-grid .card + .card {
+  margin-top: 0;
+}
+
+.blog-item {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px;
+  color: var(--text);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.blog-item::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--accent);
+}
+
+.blog-item:hover {
+  text-decoration: none;
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.08);
+  transform: translateY(-2px);
+}
+
+.blog-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.blog-icon {
+  flex: none;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--pill-hover);
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.blog-kind {
+  padding: 1px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--pill-bg);
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.blog-ext {
+  margin-left: auto;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  transition: color 0.15s ease;
+}
+
+.blog-item:hover .blog-ext {
+  color: var(--accent);
+}
+
+.blog-name {
+  font-size: 1.02rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.blog-repo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.blog-repo i {
+  flex: none;
 }
 
 /* ---------- Contest results ---------- */
@@ -606,45 +596,10 @@ a.result-link:hover {
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 1180px) {
-  .judge-grid {
+@media (max-width: 1100px) {
+  .judge-grid,
+  .blog-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 1000px) {
-  .cp-layout {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 0;
-  }
-
-  /* let the ICPC card, the blog card and the sections share one column, in this order */
-  .cp-main {
-    display: contents;
-  }
-
-  .icpc-card {
-    order: 1;
-  }
-
-  .cp-aside {
-    order: 2;
-    position: static;
-    margin-top: 24px;
-  }
-
-  .cp-section {
-    order: 3;
-  }
-
-  .blog-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 560px) {
-  .blog-list {
-    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -683,7 +638,8 @@ a.result-link:hover {
 }
 
 @media (max-width: 560px) {
-  .judge-grid {
+  .judge-grid,
+  .blog-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 

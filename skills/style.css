@@ -213,91 +213,8 @@
 /* Certification and problem solving, side by side */
 .highlight-row {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
-}
-
-/* English proficiency */
-.english-card {
-  display: flex;
-  flex-direction: column;
-  padding: 22px 24px;
-  scroll-margin-top: calc(var(--nav-height) + 16px);
-}
-
-.english-card .skill-card-title {
-  margin-bottom: 14px;
-}
-
-.ielts {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.ielts-score {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-}
-
-.ielts-score strong {
-  color: var(--accent);
-  font-size: 2.6rem;
-  font-weight: 600;
-  line-height: 1;
-}
-
-.ielts-score strong small {
-  margin-left: 6px;
-  color: var(--text-muted);
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.ielts-score > span {
-  margin-top: 8px;
-  color: var(--text-muted);
-  font-size: 0.8rem;
-}
-
-.ielts-cefr {
-  flex: none;
-  padding: 2px 12px;
-  border: 1px solid var(--accent);
-  border-radius: 999px;
-  color: var(--accent);
-  font-size: 0.78rem;
-  font-weight: 600;
-}
-
-.ielts-meter {
-  margin-top: auto;
-  padding-top: 20px;
-}
-
-.ielts-scale {
-  height: 8px;
-  overflow: hidden;
-  border-radius: 4px;
-  background: var(--pill-hover);
-}
-
-.ielts-fill {
-  display: block;
-  width: calc(var(--score) / 9 * 100%);
-  height: 100%;
-  border-radius: 4px;
-  background: var(--accent);
-}
-
-.ielts-scale-labels {
-  display: flex;
-  justify-content: space-between;
-  margin: 6px 0 0;
-  color: var(--text-muted);
-  font-size: 0.72rem;
 }
 
 /* Certification */
@@ -554,17 +471,95 @@
   color: var(--accent);
 }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 1100px) {
-  .highlight-row {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .highlight-row > :last-child {
-    grid-column: span 2;
-  }
+/* ---------- Language proficiency ---------- */
+.english-card {
+  display: grid;
+  grid-template-columns: 230px auto minmax(0, 1fr) auto;
+  grid-template-areas: "lang score meter cefr";
+  align-items: center;
+  gap: 28px;
+  padding: 22px 26px;
 }
 
+.english-lang {
+  grid-area: lang;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.english-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.english-sub {
+  margin: 2px 0 0;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.ielts-score {
+  grid-area: score;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin: 0;
+}
+
+.ielts-score strong {
+  color: var(--accent);
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.ielts-score small {
+  color: var(--text-muted);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.ielts-meter {
+  grid-area: meter;
+}
+
+.ielts-scale {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--pill-hover);
+}
+
+.ielts-fill {
+  display: block;
+  width: calc(var(--score) / 9 * 100%);
+  height: 100%;
+  border-radius: 4px;
+  background: var(--accent);
+}
+
+.ielts-scale-labels {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0 0;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+}
+
+.ielts-cefr {
+  grid-area: cefr;
+  padding: 2px 12px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ---------- Responsive ---------- */
 @media (max-width: 1000px) {
   .grid-3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -587,8 +582,7 @@
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .grid-3 > :last-child,
-  .highlight-row > :last-child {
+  .grid-3 > :last-child {
     grid-column: auto;
   }
 
@@ -603,6 +597,21 @@
 
   .skill-card--strip .skill-list {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .english-card {
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas:
+      "lang lang"
+      "score cefr"
+      "meter meter";
+    gap: 16px 20px;
+  }
+
+  .ielts-cefr {
+    justify-self: end;
   }
 }
 
