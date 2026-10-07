@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Achievements | Arfatul Islam Asif</title>
+  <meta name="description" content="Awards and honours of Arfatul Islam Asif: ICPC and programming contests, hackathons, scholarships and olympiads.">
 
   <!-- Apply saved theme before paint to avoid a flash -->
   <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t);else if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.setAttribute("data-theme","dark");}catch(e){}</script>
@@ -15,8 +16,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <!-- Shared site styles, then this page's styles -->
-  <link rel="stylesheet" href="../style.css?v=20261007n">
-  <link rel="stylesheet" href="style.css?v=20261007n">
+  <link rel="stylesheet" href="../style.css?v=20261007p">
+  <link rel="stylesheet" href="style.css?v=20261007p">
 </head>
 
 <body data-page="achievements" data-root="../">
@@ -25,42 +26,417 @@
   <main class="container">
     <header class="page-header">
       <h1>Achievements</h1>
-      <p>[Awards, scholarships and honours.]</p>
+      <p>Programming contests, hackathons, scholarships and olympiads.</p>
     </header>
 
-    <section class="card">
-      <h2 class="section-title">Awards &amp; Honours</h2>
-      <ul class="ach-list">
-        <li class="ach">
-          <span class="ach-icon"><i class="fa-solid fa-trophy"></i></span>
-          <div>
-            <p class="ach-title">[Award name]</p>
-            <p class="muted">[Issuer / event] &middot; [YYYY]</p>
-          </div>
-        </li>
-        <li class="ach">
-          <span class="ach-icon"><i class="fa-solid fa-graduation-cap"></i></span>
-          <div>
-            <p class="ach-title">[Scholarship name]</p>
-            <p class="muted">[Issuer / event] &middot; [YYYY]</p>
-          </div>
-        </li>
-        <li class="ach">
-          <span class="ach-icon"><i class="fa-solid fa-medal"></i></span>
-          <div>
-            <p class="ach-title">[Honour name]</p>
-            <p class="muted">[Issuer / event] &middot; [YYYY]</p>
-          </div>
-        </li>
-      </ul>
-    </section>
+    <div class="ach-filters" role="group" aria-label="Filter achievements">
+        <button type="button" class="ach-filter is-active" data-category="all" aria-pressed="true">All <span class="ach-count"></span></button>
+        <button type="button" class="ach-filter" data-category="contest" aria-pressed="false"><i class="fa-solid fa-code" aria-hidden="true"></i>Programming contests <span class="ach-count"></span></button>
+        <button type="button" class="ach-filter" data-category="hackathon" aria-pressed="false"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Hackathons & innovation <span class="ach-count"></span></button>
+        <button type="button" class="ach-filter" data-category="academic" aria-pressed="false"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Academic & olympiads <span class="ach-count"></span></button>
+    </div>
 
+    <!--
+      One <li class="card ach-item"> per achievement, grouped by year (newest first).
+      data-category: contest, hackathon or academic. Several <img> tags in one frame alternate automatically;
+      add class="is-doc" to certificates and screenshots so they are shown whole instead of cropped.
+    -->
+    <div class="ach-years">
+      <section class="ach-year" data-year="2026" aria-labelledby="year-2026">
+        <h2 class="ach-year-title" id="year-2026">2026<span class="ach-year-count"></span></h2>
+        <ol class="ach-list">
+          <li class="card ach-item" id="merit-scholarship" data-category="academic">
+            <div class="ach-media">
+              <button type="button" class="ach-frame" aria-label="Enlarge image: Merit Scholarship">
+                <img src="img/merit-1.webp" alt="Merit Scholarship certificate" width="480" height="347" loading="lazy" decoding="async" class="is-active is-doc">
+              </button>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-scholar"><i class="fa-solid fa-award" aria-hidden="true"></i>Scholarship</span><time class="ach-date">Sep 2026</time><span class="ach-cat">Academic & olympiads</span></p>
+              <h3 class="ach-title">Merit Scholarship</h3>
+              <p class="ach-issuer">Issued by Jalalabad Officers Association</p>
+              <p class="ach-desc">In recognition of outstanding academic performance and securing the 2nd position among students in my batch across the Sylhet Division.</p>
+              <p class="ach-extras"><span class="ach-school"><img src="../education/bsc.png" alt="" width="18" height="18">Shahjalal University of Science and Technology</span></p>
+            </div>
+          </li>
+          <li class="card ach-item" id="hackfusion-2026" data-category="hackathon">
+            <div class="ach-media">
+              <button type="button" class="ach-frame" aria-label="Enlarge images: Hackfusion 2026 National Inter-University Hackathon">
+                <img src="img/hackfusion-1.webp" alt="Prize ceremony" width="480" height="270" loading="lazy" decoding="async" class="is-active">
+                <img src="img/hackfusion-2.webp" alt="Certificate of participation" width="480" height="345" loading="lazy" decoding="async" class="is-doc">
+              </button>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-silver"><i class="fa-solid fa-medal" aria-hidden="true"></i>Runner-up</span><time class="ach-date">Apr 2026</time><span class="ach-cat">Hackathons & innovation</span></p>
+              <h3 class="ach-title">Hackfusion 2026 National Inter-University Hackathon</h3>
+              <p class="ach-issuer">Issued by Leading University, Sylhet</p>
+              <p class="ach-extras"><span class="ach-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>Team <code>ONTORPONTHIK</code></span><span class="ach-school"><img src="../education/bsc.png" alt="" width="18" height="18">Shahjalal University of Science and Technology</span></p>
+            </div>
+          </li>
+        </ol>
+      </section>
+      <section class="ach-year" data-year="2025" aria-labelledby="year-2025">
+        <h2 class="ach-year-title" id="year-2025">2025<span class="ach-year-count"></span></h2>
+        <ol class="ach-list">
+          <li class="card ach-item" id="icpc-dhaka-2025" data-category="contest">
+            <div class="ach-media">
+              <button type="button" class="ach-frame" aria-label="Enlarge images: ICPC Asia Dhaka Regional Contest 2025">
+                <img src="img/icpc2025-1.webp" alt="Certificate of achievement: rank 13" width="491" height="347" loading="lazy" decoding="async" class="is-active is-doc">
+                <img src="img/icpc2025-2.webp" alt="Final standings" width="480" height="260" loading="lazy" decoding="async" class="is-doc">
+                <img src="img/icpc2025-3.webp" alt="Team Fiery_end at the contest" width="480" height="360" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-place"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>13th place</span><time class="ach-date">Dec 2025</time><span class="ach-cat">Programming contests</span></p>
+              <h3 class="ach-title">ICPC Asia Dhaka Regional Contest 2025</h3>
+              <p class="ach-issuer">Issued by ICPC</p>
+              <p class="ach-note"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i><span>Qualified for the <a href="../competitive_programming/index.html">ICPC Asia West Continent Final 2026</a>.</span></p>
+              <p class="ach-extras"><span class="ach-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>Team <code>Fiery_end</code></span><span class="ach-school"><img src="../education/bsc.png" alt="" width="18" height="18">Shahjalal University of Science and Technology</span></p>
+              <div class="ach-links"><a class="ach-link" href="https://bapsoj.org/contests/icpc-dhaka-onsite-2025/standings" target="_blank" rel="noopener"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>Standings <span>bapsoj.org</span><i class="fa-solid fa-arrow-up-right-from-square ach-ext" aria-hidden="true"></i></a><a class="ach-link" href="https://icpc.global/ICPCID/0EG4Y581SM2T" target="_blank" rel="noopener"><i class="fa-solid fa-id-badge" aria-hidden="true"></i>ICPC profile<i class="fa-solid fa-arrow-up-right-from-square ach-ext" aria-hidden="true"></i></a></div>
+            </div>
+          </li>
+          <li class="card ach-item" id="mu-cse-fest-2025" data-category="contest">
+            <div class="ach-media">
+              <button type="button" class="ach-frame" aria-label="Enlarge images: Inter University Programming Contest, MU CSE Fest 2025">
+                <img src="img/mu2025-1.webp" alt="Final standings" width="480" height="306" loading="lazy" decoding="async" class="is-active is-doc">
+                <img src="img/mu2025-2.webp" alt="Team Fiery_end at MU CSE Fest" width="360" height="480" loading="lazy" decoding="async">
+                <img src="img/mu2025-3.webp" alt="At the contest" width="480" height="360" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-place"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>18th place</span><time class="ach-date">Nov 2025</time><span class="ach-cat">Programming contests</span></p>
+              <h3 class="ach-title">Inter University Programming Contest, MU CSE Fest 2025</h3>
+              <p class="ach-issuer">Issued by Dept of CSE, Metropolitan University</p>
+              <p class="ach-extras"><span class="ach-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>Team <code>Fiery_end</code></span><span class="ach-school"><img src="../education/bsc.png" alt="" width="18" height="18">Shahjalal University of Science and Technology</span></p>
+              <div class="ach-links"><a class="ach-link" href="https://toph.co/c/inter-university-mu-cse-fest-2025/standings" target="_blank" rel="noopener"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>Standings <span>toph.co</span><i class="fa-solid fa-arrow-up-right-from-square ach-ext" aria-hidden="true"></i></a></div>
+            </div>
+          </li>
+          <li class="card ach-item" id="icpc-preliminary-2025" data-category="contest">
+            <div class="ach-media">
+              <button type="button" class="ach-frame" aria-label="Enlarge image: ICPC Dhaka Regional Preliminary Contest 2025">
+                <img src="img/icpcpreli2025-1.webp" alt="Preliminary standings" width="480" height="221" loading="lazy" decoding="async" class="is-active is-doc">
+              </button>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-place"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>20th place</span><time class="ach-date">Nov 2025</time><span class="ach-cat">Programming contests</span></p>
+              <h3 class="ach-title">ICPC Dhaka Regional Preliminary Contest 2025</h3>
+              <p class="ach-issuer">Issued by ICPC</p>
+              <p class="ach-extras"><span class="ach-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>Team <code>Fiery_end</code></span><span class="ach-school"><img src="../education/bsc.png" alt="" width="18" height="18">Shahjalal University of Science and Technology</span></p>
+              <div class="ach-links"><a class="ach-link" href="https://bapsoj.org/contests/icpc-dhaka-2025-online-preliminary/standings" target="_blank" rel="noopener"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>Standings <span>bapsoj.org</span><i class="fa-solid fa-arrow-up-right-from-square ach-ext" aria-hidden="true"></i></a></div>
+            </div>
+          </li>
+          <li class="card ach-item" id="innovation-world-cup" data-category="hackathon">
+            <div class="ach-media">
+              <button type="button" class="ach-frame" aria-label="Enlarge image: Innovation World Cup Final 2026, Indonesia">
+                <img src="img/iwc-1.webp" alt="Selection email from Innovation World Cup Bangladesh" width="480" height="196" loading="lazy" decoding="async" class="is-active is-doc">
+              </button>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-selected"><i class="fa-solid fa-plane-departure" aria-hidden="true"></i>Selected</span><time class="ach-date">Nov 2025</time><span class="ach-cat">Hackathons & innovation</span></p>
+              <h3 class="ach-title">Innovation World Cup Final 2026, Indonesia</h3>
+              <p class="ach-issuer">Issued by IWC Bangladesh</p>
+              <p class="ach-extras"><span class="ach-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>Team <code>ONTORPONTHIK</code></span><span class="ach-school"><img src="../education/bsc.png" alt="" width="18" height="18">Shahjalal University of Science and Technology</span></p>
+            </div>
+          </li>
+          <li class="card ach-item" id="neub-ict-fest-2025" data-category="hackathon">
+            <div class="ach-media">
+              <button type="button" class="ach-frame" aria-label="Enlarge images: NEUB ICT Fest 2025 Hackathon">
+                <img src="img/neub-1.webp" alt="Winning moment" width="480" height="360" loading="lazy" decoding="async" class="is-active">
+                <img src="img/neub-2.webp" alt="Brainstorming moment" width="360" height="480" loading="lazy" decoding="async">
+                <img src="img/neub-3.webp" alt="Judgement moment" width="360" height="480" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-gold"><i class="fa-solid fa-trophy" aria-hidden="true"></i>Champion</span><time class="ach-date">Nov 2025</time><span class="ach-cat">Hackathons & innovation</span></p>
+              <h3 class="ach-title">NEUB ICT Fest 2025 Hackathon</h3>
+              <p class="ach-issuer">Issued by Dept of CSE, NEUB</p>
+              <p class="ach-extras"><span class="ach-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>Team <code>ONTORPONTHIK</code></span><span class="ach-school"><img src="../education/bsc.png" alt="" width="18" height="18">Shahjalal University of Science and Technology</span></p>
+              <div class="ach-links"><a class="ach-link" href="../projects/index.html#tikasheba"><i class="fa-solid fa-folder-open" aria-hidden="true"></i>Project: TikaSheba</a><a class="ach-link" href="https://github.com/Mutah3r/TikaSheba-NEUB-Hackathon" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>Code<i class="fa-solid fa-arrow-up-right-from-square ach-ext" aria-hidden="true"></i></a></div>
+            </div>
+          </li>
+          <li class="card ach-item" id="hacktheai-2025" data-category="hackathon">
+            <div class="ach-media">
+              <button type="button" class="ach-frame" aria-label="Enlarge images: HackTheAI 2025">
+                <img src="img/hacktheai-1.webp" alt="On stage at HackTheAI 2025" width="480" height="319" loading="lazy" decoding="async" class="is-active">
+                <img src="img/hacktheai-2.webp" alt="First runner-up at HackTheAI 2025" width="480" height="360" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-silver"><i class="fa-solid fa-medal" aria-hidden="true"></i>1st Runner-up</span><time class="ach-date">Sep 2025</time><span class="ach-cat">Hackathons & innovation</span></p>
+              <h3 class="ach-title">HackTheAI 2025</h3>
+              <p class="ach-issuer">Issued by Green University Bangladesh, SmythOS</p>
+              <p class="ach-desc">We secured 1st Runner-up out of 250+ teams, and 50 onsite teams.</p>
+              <p class="ach-extras"><span class="ach-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>Team <code>ONTORPONTHIK</code></span><span class="ach-school"><img src="../education/bsc.png" alt="" width="18" height="18">Shahjalal University of Science and Technology</span></p>
+              <div class="ach-links"><a class="ach-link" href="../projects/index.html#thryve"><i class="fa-solid fa-folder-open" aria-hidden="true"></i>Project: Thryve</a><a class="ach-link" href="https://github.com/Unayes09/Thryve-Youtubers-Toolkit-SmythOS-HackTheAI-2025" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>Code<i class="fa-solid fa-arrow-up-right-from-square ach-ext" aria-hidden="true"></i></a></div>
+            </div>
+          </li>
+          <li class="card ach-item" id="kuet-bitfest-2025" data-category="hackathon">
+            <div class="ach-media">
+              <button type="button" class="ach-frame" aria-label="Enlarge image: KUET BITFEST Hackathon 2025">
+                <img src="img/kuet-1.webp" alt="Receiving the 2nd runner-up prize" width="480" height="320" loading="lazy" decoding="async" class="is-active">
+              </button>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-bronze"><i class="fa-solid fa-medal" aria-hidden="true"></i>2nd Runner-up</span><time class="ach-date">Jan 2025</time><span class="ach-cat">Hackathons & innovation</span></p>
+              <h3 class="ach-title">KUET BITFEST Hackathon 2025</h3>
+              <p class="ach-issuer">Issued by Dept of CSE, Khulna University of Engineering &amp; Technology</p>
+              <p class="ach-extras"><span class="ach-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>Team <code>ONTORPONTHIK</code></span><span class="ach-school"><img src="../education/bsc.png" alt="" width="18" height="18">Shahjalal University of Science and Technology</span></p>
+              <div class="ach-links"><a class="ach-link" href="../projects/index.html#easybanglish"><i class="fa-solid fa-folder-open" aria-hidden="true"></i>Project: EasyBanglish</a><a class="ach-link" href="https://github.com/ArfatulAsif/EasyBanglish-ONTORPONTHIK-KUET-BITFEST-2025" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>Code<i class="fa-solid fa-arrow-up-right-from-square ach-ext" aria-hidden="true"></i></a></div>
+            </div>
+          </li>
+        </ol>
+      </section>
+      <section class="ach-year" data-year="2024" aria-labelledby="year-2024">
+        <h2 class="ach-year-title" id="year-2024">2024<span class="ach-year-count"></span></h2>
+        <ol class="ach-list">
+          <li class="card ach-item" id="icpc-dhaka-2024" data-category="contest">
+            <div class="ach-media">
+              <button type="button" class="ach-frame" aria-label="Enlarge images: ICPC Dhaka Regional Contest 2024">
+                <img src="img/icpc2024-1.webp" alt="Team certificate of participation" width="480" height="348" loading="lazy" decoding="async" class="is-active is-doc">
+                <img src="img/icpc2024-2.webp" alt="Certificate of achievement: thirty-fourth place (team)" width="491" height="347" loading="lazy" decoding="async" class="is-doc">
+                <img src="img/icpc2024-3.webp" alt="Certificate of achievement: thirty-fourth place" width="491" height="347" loading="lazy" decoding="async" class="is-doc">
+              </button>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-place"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>34th place</span><time class="ach-date">Dec 2024</time><span class="ach-cat">Programming contests</span></p>
+              <h3 class="ach-title">ICPC Dhaka Regional Contest 2024</h3>
+              <p class="ach-issuer">Issued by ICPC · DIU 2024</p>
+              <p class="ach-extras"><span class="ach-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>Team <code>SUST_Minions</code></span><span class="ach-school"><img src="../education/bsc.png" alt="" width="18" height="18">Shahjalal University of Science and Technology</span></p>
+              <div class="ach-links"><a class="ach-link" href="https://bapsoj.org/contests/icpc-asia-dhaka-regional-contest-2024-onsite-round/standings" target="_blank" rel="noopener"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>Standings <span>bapsoj.org</span><i class="fa-solid fa-arrow-up-right-from-square ach-ext" aria-hidden="true"></i></a></div>
+            </div>
+          </li>
+          <li class="card ach-item" id="icpc-preliminary-2024" data-category="contest">
+            <div class="ach-media">
+              <button type="button" class="ach-frame" aria-label="Enlarge image: ICPC Dhaka Regional Preliminary Contest 2024">
+                <img src="img/icpcpreli2024-1.webp" alt="Certificate of achievement: honorable mention" width="491" height="347" loading="lazy" decoding="async" class="is-active is-doc">
+              </button>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-place"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>17th place</span><time class="ach-date">Nov 2024</time><span class="ach-cat">Programming contests</span></p>
+              <h3 class="ach-title">ICPC Dhaka Regional Preliminary Contest 2024</h3>
+              <p class="ach-issuer">Issued by ICPC · DIU 2024</p>
+              <p class="ach-extras"><span class="ach-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>Team <code>SUST_Minions</code></span><span class="ach-school"><img src="../education/bsc.png" alt="" width="18" height="18">Shahjalal University of Science and Technology</span></p>
+              <div class="ach-links"><a class="ach-link" href="https://bapsoj.org/contests/icpc-preliminary-dhaka-site-2024/standings" target="_blank" rel="noopener"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>Standings <span>bapsoj.org</span><i class="fa-solid fa-arrow-up-right-from-square ach-ext" aria-hidden="true"></i></a></div>
+            </div>
+          </li>
+          <li class="card ach-item" id="code-samurai-2024" data-category="hackathon">
+            <div class="ach-media">
+              <button type="button" class="ach-frame" aria-label="Enlarge images: Code Samurai 2024">
+                <img src="img/codesamurai-2.webp" alt="At Code Samurai 2024" width="480" height="480" loading="lazy" decoding="async" class="is-active">
+                <img src="img/codesamurai-1.webp" alt="Code Samurai 2024 student pass" width="347" height="491" loading="lazy" decoding="async" class="is-doc">
+              </button>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-finalist"><i class="fa-solid fa-flag-checkered" aria-hidden="true"></i>Finalist</span><time class="ach-date">May 2024</time><span class="ach-cat">Hackathons & innovation</span></p>
+              <h3 class="ach-title">Code Samurai 2024</h3>
+              <p class="ach-issuer">Issued by BJIT</p>
+              <p class="ach-desc">Code Samurai 2024 is an inter-university hackathon which aims to provide students with an opportunity to solve industry-level problems.</p>
+              <p class="ach-extras"><span class="ach-school"><img src="../education/bsc.png" alt="" width="18" height="18">Shahjalal University of Science and Technology</span></p>
+              <div class="ach-links"><a class="ach-link" href="../projects/index.html#ecosync"><i class="fa-solid fa-folder-open" aria-hidden="true"></i>Project: EcoSync</a></div>
+            </div>
+          </li>
+          <li class="card ach-item" id="ncpc-onsite-2023" data-category="contest">
+            <div class="ach-media ach-media--rank tier-place" aria-hidden="true">
+              <span class="ach-rank">28<sup>th</sup></span>
+              <span class="ach-rank-label"><i class="fa-solid fa-code"></i>NCPC Onsite</span>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-place"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>28th place</span><time class="ach-date">Mar 2024</time><span class="ach-cat">Programming contests</span></p>
+              <h3 class="ach-title">National Collegiate Programming Contest (NCPC) Onsite 2023</h3>
+              <p class="ach-issuer">Issued by NCPC, hosted by Jahangirnagar University</p>
+              <p class="ach-extras"><span class="ach-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>Team <code>SUST_tripleA</code></span><span class="ach-school"><img src="../education/bsc.png" alt="" width="18" height="18">Shahjalal University of Science and Technology</span></p>
+              <div class="ach-links"><a class="ach-link" href="https://bapsoj.org/contests/ncpc-onsite-2023-hosted-by-ju/standings" target="_blank" rel="noopener"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>Standings <span>bapsoj.org</span><i class="fa-solid fa-arrow-up-right-from-square ach-ext" aria-hidden="true"></i></a></div>
+            </div>
+          </li>
+          <li class="card ach-item" id="ncpc-preliminary-2023" data-category="contest">
+            <div class="ach-media ach-media--rank tier-place" aria-hidden="true">
+              <span class="ach-rank">24<sup>th</sup></span>
+              <span class="ach-rank-label"><i class="fa-solid fa-code"></i>NCPC Preliminary</span>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-place"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>24th place</span><time class="ach-date">Feb 2024</time><span class="ach-cat">Programming contests</span></p>
+              <h3 class="ach-title">National Collegiate Programming Contest (NCPC) Preliminary 2023</h3>
+              <p class="ach-issuer">Issued by NCPC, hosted by Jahangirnagar University</p>
+              <p class="ach-extras"><span class="ach-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>Team <code>SUST_TrippleA</code></span><span class="ach-school"><img src="../education/bsc.png" alt="" width="18" height="18">Shahjalal University of Science and Technology</span></p>
+              <div class="ach-links"><a class="ach-link" href="https://bapsoj.org/contests/ncpc-preliminary-ju-2023/standings" target="_blank" rel="noopener"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>Standings <span>bapsoj.org</span><i class="fa-solid fa-arrow-up-right-from-square ach-ext" aria-hidden="true"></i></a></div>
+            </div>
+          </li>
+          <li class="card ach-item" id="sust-iupc-2024" data-category="contest">
+            <div class="ach-media ach-media--rank tier-place" aria-hidden="true">
+              <span class="ach-rank">26<sup>th</sup></span>
+              <span class="ach-rank-label"><i class="fa-solid fa-code"></i>SUST IUPC</span>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-place"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>26th place</span><time class="ach-date">Feb 2024</time><span class="ach-cat">Programming contests</span></p>
+              <h3 class="ach-title">SUST Inter University Programming Contest 2024</h3>
+              <p class="ach-issuer">Issued by SUST CSE Carnival 2024, presented by Kite Games</p>
+              <p class="ach-extras"><span class="ach-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>Team <code>SUST_tripleA</code></span><span class="ach-school"><img src="../education/bsc.png" alt="" width="18" height="18">Shahjalal University of Science and Technology</span></p>
+              <div class="ach-links"><a class="ach-link" href="https://toph.co/c/inter-university-sust-cse-carnival-2024/standings" target="_blank" rel="noopener"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>Standings <span>toph.co</span><i class="fa-solid fa-arrow-up-right-from-square ach-ext" aria-hidden="true"></i></a></div>
+            </div>
+          </li>
+        </ol>
+      </section>
+      <section class="ach-year" data-year="2023" aria-labelledby="year-2023">
+        <h2 class="ach-year-title" id="year-2023">2023<span class="ach-year-count"></span></h2>
+        <ol class="ach-list">
+          <li class="card ach-item" id="therap-javafest-2023" data-category="hackathon">
+            <div class="ach-media">
+              <button type="button" class="ach-frame" aria-label="Enlarge images: Therap JavaFest 2023">
+                <img src="img/therap-1.webp" alt="Finalist certificate" width="480" height="356" loading="lazy" decoding="async" class="is-active is-doc">
+                <img src="img/therap-2.webp" alt="At the JavaFest 2023 grand finale" width="480" height="320" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-finalist"><i class="fa-solid fa-flag-checkered" aria-hidden="true"></i>Finalist</span><time class="ach-date">Oct 2023</time><span class="ach-cat">Hackathons & innovation</span></p>
+              <h3 class="ach-title">Therap JavaFest 2023</h3>
+              <p class="ach-issuer">Issued by TherapBD</p>
+              <p class="ach-extras"><span class="ach-school"><img src="../education/bsc.png" alt="" width="18" height="18">Shahjalal University of Science and Technology</span></p>
+              <div class="ach-links"><a class="ach-link" href="../projects/index.html#disaster"><i class="fa-solid fa-folder-open" aria-hidden="true"></i>Project: Emergency Disaster Management System</a><a class="ach-link" href="https://github.com/ArfatulAsif/emergency-disaster-management-system" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>Code<i class="fa-solid fa-arrow-up-right-from-square ach-ext" aria-hidden="true"></i></a></div>
+            </div>
+          </li>
+          <li class="card ach-item" id="iiuc-iupc-2023" data-category="contest">
+            <div class="ach-media ach-media--rank tier-place" aria-hidden="true">
+              <span class="ach-rank">11<sup>th</sup></span>
+              <span class="ach-rank-label"><i class="fa-solid fa-code"></i>IIUC IUPC</span>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-place"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>11th place</span><time class="ach-date">Sep 2023</time><span class="ach-cat">Programming contests</span></p>
+              <h3 class="ach-title">IIUC Inter University Programming Contest 2023</h3>
+              <p class="ach-issuer">Issued by International Islamic University Chittagong</p>
+              <p class="ach-extras"><span class="ach-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>Team <code>SUST_Beginners</code></span><span class="ach-school"><img src="../education/bsc.png" alt="" width="18" height="18">Shahjalal University of Science and Technology</span></p>
+              <div class="ach-links"><a class="ach-link" href="https://toph.co/c/15th-iiuc-inter-university-2023/standings" target="_blank" rel="noopener"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>Standings <span>toph.co</span><i class="fa-solid fa-arrow-up-right-from-square ach-ext" aria-hidden="true"></i></a></div>
+            </div>
+          </li>
+          <li class="card ach-item" id="baiust-junior-2023" data-category="contest">
+            <div class="ach-media ach-media--rank tier-gold" aria-hidden="true">
+              <span class="ach-rank">1<sup>st</sup></span>
+              <span class="ach-rank-label"><i class="fa-solid fa-code"></i>BAIUST Junior IUPC</span>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-gold"><i class="fa-solid fa-trophy" aria-hidden="true"></i>1st place</span><time class="ach-date">May 2023</time><span class="ach-cat">Programming contests</span></p>
+              <h3 class="ach-title">BAIUST Junior Inter University Programming Contest 2023, Episode 1</h3>
+              <p class="ach-issuer">Issued by BAIUST CSE</p>
+              <p class="ach-extras"><span class="ach-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>Team <code>SUST_JCPSCbros</code></span><span class="ach-school"><img src="../education/bsc.png" alt="" width="18" height="18">Shahjalal University of Science and Technology</span></p>
+              <div class="ach-links"><a class="ach-link" href="https://toph.co/contests/training/e6ae44f/standings" target="_blank" rel="noopener"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>Standings <span>toph.co</span><i class="fa-solid fa-arrow-up-right-from-square ach-ext" aria-hidden="true"></i></a></div>
+            </div>
+          </li>
+        </ol>
+      </section>
+      <section class="ach-year" data-year="2022" aria-labelledby="year-2022">
+        <h2 class="ach-year-title" id="year-2022">2022<span class="ach-year-count"></span></h2>
+        <ol class="ach-list">
+          <li class="card ach-item" id="sec-junior-2022" data-category="contest">
+            <div class="ach-media ach-media--rank tier-place" aria-hidden="true">
+              <span class="ach-rank">43<sup>rd</sup></span>
+              <span class="ach-rank-label"><i class="fa-solid fa-code"></i>SEC Junior IUPC</span>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-place"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>43rd place</span><time class="ach-date">Aug 2022</time><span class="ach-cat">Programming contests</span></p>
+              <h3 class="ach-title">SEC Inter University Junior Programming Contest 2022</h3>
+              <p class="ach-extras"><span class="ach-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>Team <code>SUST_Demogorgon</code></span><span class="ach-school"><img src="../education/bsc.png" alt="" width="18" height="18">Shahjalal University of Science and Technology</span></p>
+              <div class="ach-links"><a class="ach-link" href="https://toph.co/c/sec-inter-university-junior-2022-r" target="_blank" rel="noopener"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>Standings <span>toph.co</span><i class="fa-solid fa-arrow-up-right-from-square ach-ext" aria-hidden="true"></i></a></div>
+            </div>
+          </li>
+          <li class="card ach-item" id="talent-of-the-year-2022" data-category="academic">
+            <div class="ach-media">
+              <button type="button" class="ach-frame" aria-label="Enlarge image: Talent of the Year 2022">
+                <img src="img/talent-1.webp" alt="Talent of the Year certificate and prizes" width="480" height="216" loading="lazy" decoding="async" class="is-active">
+              </button>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-place"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>5th place</span><time class="ach-date">Jan 2022</time><span class="ach-cat">Academic & olympiads</span></p>
+              <h3 class="ach-title">Talent of the Year 2022</h3>
+              <p class="ach-issuer">Issued by SUST Career Club</p>
+              <p class="ach-extras"><span class="ach-school"><img src="../education/bsc.png" alt="" width="18" height="18">Shahjalal University of Science and Technology</span></p>
+            </div>
+          </li>
+        </ol>
+      </section>
+      <section class="ach-year" data-year="2020" aria-labelledby="year-2020">
+        <h2 class="ach-year-title" id="year-2020">2020<span class="ach-year-count"></span></h2>
+        <ol class="ach-list">
+          <li class="card ach-item" id="bdpho-2020" data-category="academic">
+            <div class="ach-media">
+              <button type="button" class="ach-frame" aria-label="Enlarge image: 10th Bangladesh Physics Olympiad">
+                <img src="img/bdpho2020-1.webp" alt="Bangladesh Physics Olympiad certificate" width="480" height="348" loading="lazy" decoding="async" class="is-active is-doc">
+              </button>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-place"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>6th · Regional round</span><time class="ach-date">Jan 2020</time><span class="ach-cat">Academic & olympiads</span></p>
+              <h3 class="ach-title">10th Bangladesh Physics Olympiad</h3>
+              <p class="ach-issuer">Issued by BdPhO</p>
+              <p class="ach-extras"><span class="ach-school"><img src="../education/hsc.png" alt="" width="18" height="18">Murari Chand College</span></p>
+            </div>
+          </li>
+        </ol>
+      </section>
+      <section class="ach-year" data-year="2019" aria-labelledby="year-2019">
+        <h2 class="ach-year-title" id="year-2019">2019<span class="ach-year-count"></span></h2>
+        <ol class="ach-list">
+          <li class="card ach-item" id="iscpc-2019" data-category="contest">
+            <div class="ach-media">
+              <button type="button" class="ach-frame" aria-label="Enlarge image: Inter School and College Programming Contest 2019, Sylhet Regional Selection">
+                <img src="img/iscpc2019-1.webp" alt="ISCPC 2019 certificate" width="480" height="348" loading="lazy" decoding="async" class="is-active is-doc">
+              </button>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-bronze"><i class="fa-solid fa-medal" aria-hidden="true"></i>2nd Runner-up</span><time class="ach-date">Sep 2019</time><span class="ach-cat">Programming contests</span></p>
+              <h3 class="ach-title">Inter School and College Programming Contest 2019, Sylhet Regional Selection</h3>
+              <p class="ach-issuer">Issued by ISCPC</p>
+              <p class="ach-extras"><span class="ach-team"><i class="fa-solid fa-user-group" aria-hidden="true"></i>Team <code>mc_Buzzinga</code></span><span class="ach-school"><img src="../education/hsc.png" alt="" width="18" height="18">Murari Chand College</span></p>
+            </div>
+          </li>
+          <li class="card ach-item" id="bdpho-2019" data-category="academic">
+            <div class="ach-media ach-media--rank tier-bronze" aria-hidden="true">
+              <span class="ach-rank">3<sup>rd</sup></span>
+              <span class="ach-rank-label"><i class="fa-solid fa-graduation-cap"></i>Physics Olympiad</span>
+              <span class="ach-rank-stage">Regional round</span>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-bronze"><i class="fa-solid fa-medal" aria-hidden="true"></i>3rd · Regional round</span><time class="ach-date">Jan 2019</time><span class="ach-cat">Academic & olympiads</span></p>
+              <h3 class="ach-title">9th Bangladesh Physics Olympiad</h3>
+              <p class="ach-issuer">Issued by BdPhO</p>
+              <p class="ach-extras"><span class="ach-school"><img src="../education/hsc.png" alt="" width="18" height="18">Murari Chand College</span></p>
+            </div>
+          </li>
+        </ol>
+      </section>
+      <section class="ach-year" data-year="2017" aria-labelledby="year-2017">
+        <h2 class="ach-year-title" id="year-2017">2017<span class="ach-year-count"></span></h2>
+        <ol class="ach-list">
+          <li class="card ach-item" id="bdjso-2017" data-category="academic">
+            <div class="ach-media ach-media--rank tier-place" aria-hidden="true">
+              <span class="ach-rank">6<sup>th</sup></span>
+              <span class="ach-rank-label"><i class="fa-solid fa-graduation-cap"></i>Junior Science Olympiad</span>
+              <span class="ach-rank-stage">Divisional round</span>
+            </div>
+            <div class="ach-body">
+              <p class="ach-meta"><span class="ach-badge tier-place"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i>6th · Divisional round</span><time class="ach-date">Mar 2017</time><span class="ach-cat">Academic & olympiads</span></p>
+              <h3 class="ach-title">Bangladesh Junior Science Olympiad (BDJSO) 2017</h3>
+              <p class="ach-issuer">Issued by BDJSO</p>
+              <p class="ach-extras"><span class="ach-school"><img src="../education/ssc.jpeg" alt="" width="18" height="18">Jalalabad Cantonment Public School and College</span></p>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </div>
   </main>
+
+  <!-- Full-size image viewer -->
+  <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+    <button type="button" class="lightbox-btn lightbox-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <button type="button" class="lightbox-btn lightbox-prev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+    <figure class="lightbox-figure">
+      <img class="lightbox-img" src="" alt="">
+      <figcaption class="lightbox-caption"></figcaption>
+    </figure>
+    <button type="button" class="lightbox-btn lightbox-next" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+  </dialog>
 
   <footer id="site-footer" class="site-footer"></footer>
 
   <!-- Shared site script, then this page's script -->
-  <script src="../script.js?v=20261007n"></script>
-  <script src="script.js?v=20261007n"></script>
+  <script src="../script.js?v=20261007p"></script>
+  <script src="script.js?v=20261007p"></script>
 </body>
 </html>
