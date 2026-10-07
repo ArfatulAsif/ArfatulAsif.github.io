@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experiences | Arfatul Islam Asif</title>
+  <title>Experience | Arfatul Islam Asif</title>
+  <meta name="description" content="Teaching and industry experience of Arfatul Islam Asif: Lecturer at Metropolitan University Bangladesh and AI software developer at Invisible Technologies.">
 
   <!-- Apply saved theme before paint to avoid a flash -->
   <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t);else if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.setAttribute("data-theme","dark");}catch(e){}</script>
@@ -15,8 +16,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <!-- Shared site styles, then this page's styles -->
-  <link rel="stylesheet" href="../style.css?v=20261007b">
-  <link rel="stylesheet" href="style.css?v=20261007b">
+  <link rel="stylesheet" href="../style.css?v=20261007c">
+  <link rel="stylesheet" href="style.css?v=20261007c">
 </head>
 
 <body data-page="experiences" data-root="../">
@@ -24,44 +25,142 @@
 
   <main class="container">
     <header class="page-header">
-      <h1>Experiences</h1>
-      <p>[Work, research and leadership experience.]</p>
+      <h1>Experience</h1>
+      <p>Teaching computer science at Metropolitan University Bangladesh, and building and evaluating AI-integrated software at Invisible Technologies.</p>
     </header>
 
-    <section class="card">
-      <h2 class="section-title">Work &amp; Research</h2>
-      <ol class="timeline">
-        <li class="exp">
-          <div class="exp-head">
-            <h3>[Role]</h3>
-            <span class="exp-dates">[Mon YYYY] &ndash; Present</span>
-          </div>
-          <p class="exp-org">[Organization] &middot; [City, Country]</p>
-          <ul>
-            <li>[What you did and the result.]</li>
-            <li>[Another responsibility or accomplishment.]</li>
-          </ul>
+    <!-- Numbers at a glance (taken from the roles below) -->
+    <ul class="xp-stats" aria-label="Highlights">
+      <li class="card xp-stat">
+        <span class="xp-stat-icon" aria-hidden="true"><i class="fa-solid fa-chalkboard-user"></i></span>
+        <span><strong>5</strong> courses taught<small>Metropolitan University</small></span>
+      </li>
+      <li class="card xp-stat">
+        <span class="xp-stat-icon" aria-hidden="true"><i class="fa-solid fa-list-check"></i></span>
+        <span><strong>500+</strong> LLM deliverables reviewed<small>100% acceptance accuracy</small></span>
+      </li>
+      <li class="card xp-stat">
+        <span class="xp-stat-icon" aria-hidden="true"><i class="fa-solid fa-plug"></i></span>
+        <span><strong>50+</strong> AI-integrated APIs built<small>FastAPI &middot; 100+ endpoints tested</small></span>
+      </li>
+      <li class="card xp-stat">
+        <span class="xp-stat-icon" aria-hidden="true"><i class="fa-solid fa-user-plus"></i></span>
+        <span><strong>10+</strong> new hires onboarded<small>Invisible Technologies</small></span>
+      </li>
+    </ul>
+
+    <div class="xp-layout">
+      <!--
+        Timeline: one <li class="xp-org"> per organisation.
+        Durations are worked out from data-start / data-end (YYYY-MM, or "present") by script.js.
+      -->
+      <ol class="xp-timeline">
+
+        <!-- ===== Metropolitan University Bangladesh ===== -->
+        <li class="xp-org is-current">
+          <article class="card xp-card">
+            <header class="xp-head">
+              <span class="xp-logo xp-logo--wide"><img src="img/metropolitan.webp" alt="Metropolitan University Bangladesh logo" width="291" height="77"></span>
+              <div class="xp-head-text">
+                <h2 class="xp-title">Lecturer <span class="xp-badge">Current</span></h2>
+                <p class="xp-org-name">Metropolitan University Bangladesh &middot; Full-time</p>
+                <p class="xp-meta">
+                  <span><i class="fa-regular fa-calendar" aria-hidden="true"></i><time datetime="2026-05">May 2026</time> &ndash; Present &middot; <span class="xp-duration" data-start="2026-05" data-end="present">6 mos</span></span>
+                  <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Sylhet, Bangladesh &middot; On-site</span>
+                </p>
+              </div>
+            </header>
+
+            <p class="xp-desc">Lecturer at the Department of Computer Science and Engineering.</p>
+
+            <h3 class="xp-subhead">Courses taught</h3>
+            <ul class="xp-courses">
+              <li><i class="fa-solid fa-dna" aria-hidden="true"></i>Bioinformatics</li>
+              <li><i class="fa-solid fa-sitemap" aria-hidden="true"></i>Software Engineering and Design Patterns</li>
+              <li><i class="fa-solid fa-code" aria-hidden="true"></i>Structured Programming</li>
+              <li><i class="fa-solid fa-layer-group" aria-hidden="true"></i>Data Structures</li>
+              <li><i class="fa-solid fa-trophy" aria-hidden="true"></i>Competitive Programming</li>
+            </ul>
+          </article>
         </li>
-        <li class="exp">
-          <div class="exp-head">
-            <h3>[Role]</h3>
-            <span class="exp-dates">[Mon YYYY] &ndash; [Mon YYYY]</span>
-          </div>
-          <p class="exp-org">[Organization] &middot; [City, Country]</p>
-          <ul>
-            <li>[What you did and the result.]</li>
-            <li>[Another responsibility or accomplishment.]</li>
-          </ul>
+
+        <!-- ===== Invisible Technologies (two roles) ===== -->
+        <li class="xp-org">
+          <article class="card xp-card">
+            <header class="xp-head">
+              <span class="xp-logo"><img src="img/invisible.webp" alt="Invisible Technologies logo" width="200" height="200"></span>
+              <div class="xp-head-text">
+                <h2 class="xp-title">Invisible Technologies</h2>
+                <p class="xp-meta">
+                  <span><i class="fa-regular fa-calendar" aria-hidden="true"></i><span class="xp-duration" data-start="2023-11" data-end="2025-03">1 yr 5 mos</span></span>
+                  <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i>United States &middot; Remote</span>
+                </p>
+              </div>
+            </header>
+
+            <ol class="xp-roles">
+              <li class="xp-role">
+                <h3 class="xp-role-title">Advanced AIT Software Development</h3>
+                <p class="xp-role-meta">Part-time &middot; <time datetime="2024-05">May 2024</time> &ndash; <time datetime="2025-03">Mar 2025</time> &middot; <span class="xp-duration" data-start="2024-05" data-end="2025-03">11 mos</span></p>
+                <p class="xp-promo"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i>Advanced to a mid-senior role</p>
+                <ul class="xp-points">
+                  <li>Collaborated with the Team Lead to onboard <strong>10+ new hires</strong> by streamlining training and workflow integration, reducing ramp-up time and enabling faster contribution to active projects.</li>
+                  <li>Reviewed and validated <strong>500+ LLM-generated deliverables</strong> across Python, C++, Java, and JavaScript, ensuring high-quality outputs and maintaining a <strong>100% acceptance accuracy</strong> standard.</li>
+                  <li>Co-developed <strong>10+</strong> comprehensive documentation and training materials to benchmark developer responses.</li>
+                </ul>
+                <ul class="xp-tags" aria-label="Skills used">
+                  <li>LLM evaluation</li><li>Python</li><li>C++</li><li>Java</li><li>JavaScript</li><li>Technical documentation</li><li>Onboarding</li>
+                </ul>
+                <a class="xp-attachment" href="Reference%20letter-Arfatul-kim.pdf" target="_blank" rel="noopener">
+                  <img src="img/reference-letter.webp" alt="" width="720" height="932">
+                  <span>
+                    <strong>Recommendation letter from my team lead in the C++ team</strong>
+                    <small>Ge Jin &middot; PDF</small>
+                  </span>
+                  <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                </a>
+              </li>
+
+              <li class="xp-role">
+                <h3 class="xp-role-title">Advanced AIT Software Development</h3>
+                <p class="xp-role-meta">Full-time &middot; <time datetime="2023-11">Nov 2023</time> &ndash; <time datetime="2024-04">Apr 2024</time> &middot; <span class="xp-duration" data-start="2023-11" data-end="2024-04">6 mos</span></p>
+                <ul class="xp-points">
+                  <li>Collaborated across <strong>5 teams</strong> to integrate AI APIs, perform prompt engineering, and fine-tune models for practical software applications.</li>
+                  <li>Developed <strong>50+ AI-integrated APIs</strong> utilizing FastAPI to optimize system instructions, and rigorously tested over <strong>100 endpoints</strong> to ensure reliable JSON payload responses.</li>
+                  <li>Co-created <strong>3 specialized MySQL databases</strong> designed to track prompt engineering workflows, systematically storing agent data, topics, prompts, responses, and Average Handle Time (AHT).</li>
+                </ul>
+                <ul class="xp-tags" aria-label="Skills used">
+                  <li>FastAPI</li><li>MySQL</li><li>Prompt engineering</li><li>Fine-tuning</li><li>AI API integration</li><li>API testing</li>
+                </ul>
+              </li>
+            </ol>
+          </article>
         </li>
       </ol>
-    </section>
 
+      <!-- ===== Reference letter ===== -->
+      <aside class="xp-aside" aria-label="Reference letter">
+        <article class="card letter-card">
+          <p class="letter-kicker"><i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i> Reference letter</p>
+          <a class="letter-thumb" href="Reference%20letter-Arfatul-kim.pdf" target="_blank" rel="noopener" aria-label="Open the reference letter (PDF)">
+            <img src="img/reference-letter.webp" alt="First page of the reference letter from Invisible Technologies" width="720" height="932" loading="lazy">
+          </a>
+          <blockquote class="letter-quote">
+            <p>I wholeheartedly endorse Arfatul Asif for any future academic or professional pursuits he wishes to undertake.</p>
+          </blockquote>
+          <p class="letter-from"><strong>Ge Jin</strong><span>Team Lead, C++ team &middot; Invisible Technologies</span></p>
+          <a class="letter-btn" href="Reference%20letter-Arfatul-kim.pdf" target="_blank" rel="noopener">
+            <i class="fa-regular fa-file-pdf" aria-hidden="true"></i> Read the full letter
+          </a>
+        </article>
+      </aside>
+    </div>
   </main>
 
   <footer id="site-footer" class="site-footer"></footer>
 
   <!-- Shared site script, then this page's script -->
-  <script src="../script.js?v=20261007b"></script>
-  <script src="script.js?v=20261007b"></script>
+  <script src="../script.js?v=20261007c"></script>
+  <script src="script.js?v=20261007c"></script>
 </body>
 </html>
