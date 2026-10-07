@@ -16,8 +16,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <!-- Shared site styles, then this page's styles -->
-  <link rel="stylesheet" href="../style.css?v=20261007k">
-  <link rel="stylesheet" href="style.css?v=20261007k">
+  <link rel="stylesheet" href="../style.css?v=20261007l">
+  <link rel="stylesheet" href="style.css?v=20261007l">
 </head>
 
 <body data-page="teaching" data-root="../">
@@ -31,68 +31,53 @@
 
     <!-- ===== Courses taught ===== -->
     <section class="teach-section" aria-labelledby="courses-title">
-      <h2 class="teach-section-title" id="courses-title"><i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i>Courses taught</h2>
+      <h2 class="teach-section-title" id="courses-title"><i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i>Courses taught<span class="section-count">5</span></h2>
 
-      <!-- One card per course. Class repositories are listed under the course they belong to. -->
-      <div class="course-grid">
-
-        <article class="card course-card">
-          <header class="course-head">
-            <span class="course-icon" aria-hidden="true"><i class="fa-solid fa-trophy"></i></span>
-            <h3 class="course-name">Competitive Programming</h3>
-          </header>
-          <p class="course-label">Class repositories</p>
-          <ul class="repo-list">
-            <li><a class="repo-link" href="https://github.com/ArfatulAsif/Competitive-Programming-Training-62-A" target="_blank" rel="noopener"><i class="fa-brands fa-github repo-gh" aria-hidden="true"></i><span><strong>Batch 62 &middot; Section A</strong><small>Competitive-Programming-Training-62-A</small></span><i class="fa-solid fa-arrow-up-right-from-square repo-ext" aria-hidden="true"></i></a></li>
-            <li><a class="repo-link" href="https://github.com/ArfatulAsif/Competitive-Programming-Training-62-B" target="_blank" rel="noopener"><i class="fa-brands fa-github repo-gh" aria-hidden="true"></i><span><strong>Batch 62 &middot; Section B</strong><small>Competitive-Programming-Training-62-B</small></span><i class="fa-solid fa-arrow-up-right-from-square repo-ext" aria-hidden="true"></i></a></li>
-          </ul>
-        </article>
-
-        <article class="card course-card">
-          <header class="course-head">
-            <span class="course-icon" aria-hidden="true"><i class="fa-solid fa-sitemap"></i></span>
-            <h3 class="course-name">Software Engineering and Design Patterns</h3>
-          </header>
-          <p class="course-label">Class repositories</p>
-          <ul class="repo-list">
-            <li><a class="repo-link" href="https://github.com/ArfatulAsif/CSE59-A-F-SE_DP-LAB" target="_blank" rel="noopener"><i class="fa-brands fa-github repo-gh" aria-hidden="true"></i><span><strong>Batch 59 &middot; A-F Lab</strong><small>CSE59-A-F-SE_DP-LAB</small></span><i class="fa-solid fa-arrow-up-right-from-square repo-ext" aria-hidden="true"></i></a></li>
-            <li><a class="repo-link" href="https://github.com/ArfatulAsif/CSE59-D-G-SE_DP-LAB" target="_blank" rel="noopener"><i class="fa-brands fa-github repo-gh" aria-hidden="true"></i><span><strong>Batch 59 &middot; D-G Lab</strong><small>CSE59-D-G-SE_DP-LAB</small></span><i class="fa-solid fa-arrow-up-right-from-square repo-ext" aria-hidden="true"></i></a></li>
-          </ul>
-        </article>
-
-        <article class="card course-card">
-          <header class="course-head">
-            <span class="course-icon" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></span>
-            <h3 class="course-name">Data Structures</h3>
-          </header>
-          <p class="course-label">Class repository</p>
-          <ul class="repo-list">
-            <li><a class="repo-link" href="https://github.com/ArfatulAsif/CSE-Data-Structure-Lab-For-MU-65" target="_blank" rel="noopener"><i class="fa-brands fa-github repo-gh" aria-hidden="true"></i><span><strong>Batch 65 &middot; Lab</strong><small>CSE-Data-Structure-Lab-For-MU-65</small></span><i class="fa-solid fa-arrow-up-right-from-square repo-ext" aria-hidden="true"></i></a></li>
-          </ul>
-        </article>
-
-        <article class="card course-card">
-          <header class="course-head">
-            <span class="course-icon" aria-hidden="true"><i class="fa-solid fa-code"></i></span>
-            <h3 class="course-name">Structured Programming</h3>
-          </header>
-          <p class="course-label">Class repository</p>
-          <ul class="repo-list">
-            <li><a class="repo-link" href="https://github.com/ArfatulAsif/CSE-Structured-Programming-66-D" target="_blank" rel="noopener"><i class="fa-brands fa-github repo-gh" aria-hidden="true"></i><span><strong>Batch 66 &middot; Section D</strong><small>CSE-Structured-Programming-66-D</small></span><i class="fa-solid fa-arrow-up-right-from-square repo-ext" aria-hidden="true"></i></a></li>
-          </ul>
-        </article>
-
-        <article class="card course-card">
-          <header class="course-head">
+      <!-- One row per course; its class repositories (GitHub) sit on the right -->
+      <div class="card course-table">
+        <div class="course-table-head" aria-hidden="true">
+          <span>Course</span>
+          <span>Class materials</span>
+        </div>
+        <ol class="course-list">
+          <li class="course-row">
             <span class="course-icon" aria-hidden="true"><i class="fa-solid fa-dna"></i></span>
             <h3 class="course-name">Bioinformatics</h3>
-          </header>
-          <p class="course-label">Related research</p>
-          <ul class="repo-list">
-            <li><a class="repo-link" href="../my_research/index.html?domain=bio"><i class="fa-solid fa-flask repo-gh" aria-hidden="true"></i><span><strong>Computational Biology</strong><small>My research in this area</small></span><i class="fa-solid fa-arrow-right repo-ext" aria-hidden="true"></i></a></li>
-          </ul>
-        </article>
-
+            <div class="course-links">
+              <a class="course-link course-link--related" href="../my_research/index.html?domain=bio"><i class="fa-solid fa-flask" aria-hidden="true"></i>Related research</a>
+            </div>
+          </li>
+          <li class="course-row">
+            <span class="course-icon" aria-hidden="true"><i class="fa-solid fa-sitemap"></i></span>
+            <h3 class="course-name">Software Engineering and Design Patterns</h3>
+            <div class="course-links">
+              <a class="course-link" href="https://github.com/ArfatulAsif/CSE59-A-F-SE_DP-LAB" target="_blank" rel="noopener" title="CSE59-A-F-SE_DP-LAB"><i class="fa-brands fa-github" aria-hidden="true"></i>Batch 59 &middot; A-F Lab</a>
+              <a class="course-link" href="https://github.com/ArfatulAsif/CSE59-D-G-SE_DP-LAB" target="_blank" rel="noopener" title="CSE59-D-G-SE_DP-LAB"><i class="fa-brands fa-github" aria-hidden="true"></i>Batch 59 &middot; D-G Lab</a>
+            </div>
+          </li>
+          <li class="course-row">
+            <span class="course-icon" aria-hidden="true"><i class="fa-solid fa-code"></i></span>
+            <h3 class="course-name">Structured Programming</h3>
+            <div class="course-links">
+              <a class="course-link" href="https://github.com/ArfatulAsif/CSE-Structured-Programming-66-D" target="_blank" rel="noopener" title="CSE-Structured-Programming-66-D"><i class="fa-brands fa-github" aria-hidden="true"></i>Batch 66 &middot; Section D</a>
+            </div>
+          </li>
+          <li class="course-row">
+            <span class="course-icon" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></span>
+            <h3 class="course-name">Data Structures</h3>
+            <div class="course-links">
+              <a class="course-link" href="https://github.com/ArfatulAsif/CSE-Data-Structure-Lab-For-MU-65" target="_blank" rel="noopener" title="CSE-Data-Structure-Lab-For-MU-65"><i class="fa-brands fa-github" aria-hidden="true"></i>Batch 65 &middot; Lab</a>
+            </div>
+          </li>
+          <li class="course-row">
+            <span class="course-icon" aria-hidden="true"><i class="fa-solid fa-trophy"></i></span>
+            <h3 class="course-name">Competitive Programming</h3>
+            <div class="course-links">
+              <a class="course-link" href="https://github.com/ArfatulAsif/Competitive-Programming-Training-62-A" target="_blank" rel="noopener" title="Competitive-Programming-Training-62-A"><i class="fa-brands fa-github" aria-hidden="true"></i>Batch 62 &middot; Section A</a>
+              <a class="course-link" href="https://github.com/ArfatulAsif/Competitive-Programming-Training-62-B" target="_blank" rel="noopener" title="Competitive-Programming-Training-62-B"><i class="fa-brands fa-github" aria-hidden="true"></i>Batch 62 &middot; Section B</a>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
@@ -140,7 +125,7 @@
   <footer id="site-footer" class="site-footer"></footer>
 
   <!-- Shared site script, then this page's script -->
-  <script src="../script.js?v=20261007k"></script>
-  <script src="script.js?v=20261007k"></script>
+  <script src="../script.js?v=20261007l"></script>
+  <script src="script.js?v=20261007l"></script>
 </body>
 </html>
