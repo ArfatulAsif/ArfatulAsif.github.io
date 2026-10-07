@@ -213,8 +213,91 @@
 /* Certification and problem solving, side by side */
 .highlight-row {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
+}
+
+/* English proficiency */
+.english-card {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 24px;
+  scroll-margin-top: calc(var(--nav-height) + 16px);
+}
+
+.english-card .skill-card-title {
+  margin-bottom: 14px;
+}
+
+.ielts {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ielts-score {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.ielts-score strong {
+  color: var(--accent);
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.ielts-score strong small {
+  margin-left: 6px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.ielts-score > span {
+  margin-top: 8px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.ielts-cefr {
+  flex: none;
+  padding: 2px 12px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.ielts-meter {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.ielts-scale {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--pill-hover);
+}
+
+.ielts-fill {
+  display: block;
+  width: calc(var(--score) / 9 * 100%);
+  height: 100%;
+  border-radius: 4px;
+  background: var(--accent);
+}
+
+.ielts-scale-labels {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0 0;
+  color: var(--text-muted);
+  font-size: 0.72rem;
 }
 
 /* Certification */
@@ -472,6 +555,16 @@
 }
 
 /* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .highlight-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .highlight-row > :last-child {
+    grid-column: span 2;
+  }
+}
+
 @media (max-width: 1000px) {
   .grid-3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -494,7 +587,8 @@
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .grid-3 > :last-child {
+  .grid-3 > :last-child,
+  .highlight-row > :last-child {
     grid-column: auto;
   }
 
