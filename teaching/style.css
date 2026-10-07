@@ -37,7 +37,7 @@
 .course-table-head,
 .course-row {
   display: grid;
-  grid-template-columns: 40px minmax(0, 1fr) auto;
+  grid-template-columns: 40px minmax(0, 1fr) 240px 340px;
   align-items: center;
   column-gap: 16px;
   padding: 0 24px;
@@ -101,6 +101,53 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 8px;
+}
+
+/* Timeline: when the course ran */
+.course-term {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.term-dates {
+  white-space: nowrap;
+}
+
+.term-dot {
+  flex: none;
+  width: 9px;
+  height: 9px;
+  border: 2px solid var(--text-muted);
+  border-radius: 50%;
+}
+
+.course-term.is-current {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.course-term.is-current .term-dot {
+  border-color: var(--accent);
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--pill-hover);
+}
+
+.term-badge {
+  padding: 0 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 1.7;
+  text-transform: uppercase;
 }
 
 .course-link {
@@ -282,6 +329,27 @@
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1000px) {
+  .course-table-head {
+    grid-template-columns: 40px minmax(0, 1fr) auto;
+  }
+
+  .course-table-head span:nth-child(2) {
+    display: none;
+  }
+
+  .course-row {
+    grid-template-columns: 40px minmax(0, 1fr) auto;
+    grid-template-areas:
+      "icon name links"
+      "icon term links";
+    row-gap: 4px;
+  }
+
+  .course-icon { grid-area: icon; }
+  .course-name { grid-area: name; }
+  .course-term { grid-area: term; }
+  .course-links { grid-area: links; }
+
   .video-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -299,7 +367,11 @@
 
   .course-row {
     grid-template-columns: 40px minmax(0, 1fr);
-    row-gap: 10px;
+    grid-template-areas:
+      "icon name"
+      "icon term"
+      ". links";
+    row-gap: 6px;
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -309,8 +381,8 @@
   }
 
   .course-links {
-    grid-column: 2;
     justify-content: flex-start;
+    margin-top: 4px;
   }
 
   .mentor-card {
